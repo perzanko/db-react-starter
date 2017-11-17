@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #20-vendor timepicker
+\*------------------------------------*/
+/*//*/
+/*/ @group timepicker*/
+/*//*/
+
+/*/ @type string*/
+
+
+div.ui-timepicker-wrapper {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  ul.ui-timepicker-list {
+    li.ui-timepicker-am, .ui-timepicker-pm {
+
+    }
+    li.ui-timepicker-selected {
+      background-color: #eee;
+    }
+  }
+}

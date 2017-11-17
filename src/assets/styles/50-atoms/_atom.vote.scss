@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    #50-atoms vote
+\*------------------------------------*/
+/*//*/
+/*/ @group vote*/
+/*//*/
+
+$iscss-namespace-vote:   $iscss-namespace !default;
+.#{$iscss-namespace-vote}votes {
+  padding: calculate-rem(30px) 0 0 0;
+  width: 100%;
+  border-top: 1px solid #eee;
+  &__item {
+    padding: calculate-rem(30px) 0 0 0;
+    &:first-child {
+      padding: 0;
+    }
+  }
+  .paragraph {
+    margin-bottom: calc(6px);
+  }
+  .provider__description__stars {
+
+  }
+  span {
+
+  }
+}

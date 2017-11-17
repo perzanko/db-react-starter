@@ -1,0 +1,100 @@
+/*------------------------------------*\
+    #10-base Page
+\*------------------------------------*/
+/*//*/
+/*/ @group base*/
+/*//*/
+
+/**
+ * High-, page-level styling.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ * 4. Prevent certain mobile browsers from automatically zooming fonts.
+ * 5. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ */
+html {
+    font-size: ($iscss-base-font-size / 16px) * 1em; /* [1] */
+    line-height: $iscss-base-line-height / $iscss-base-font-size; /* [1] */
+    background-color: $iscss-base-background-color;
+    color: $color-text;
+    min-height: 100%; /* [3] */
+    height: 100%;
+    -webkit-text-size-adjust: 100%; /* [4] */
+        -ms-text-size-adjust: 100%; /* [4] */
+    -moz-osx-font-smoothing: grayscale; /* [5] */
+     -webkit-font-smoothing: antialiased; /* [5] */
+}
+
+body {
+  overflow-x: hidden;
+  background-color: $iscss-base-background-color;
+  font-family: $iscss-font-family--base;
+  height: 100%;
+  @include iscss-font-size($iscss-font-size--lg);
+  @include media-breakpoint-down(sm) {
+    @include iscss-font-size($iscss-font-size--md, auto);
+  }
+}
+a {
+  text-decoration: none;
+  color: $color-text;
+  font-weight: 700;
+}
+.hidden-sm {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+.visible-sm {
+  display: none;
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.hidden-xs {
+  @include media-breakpoint-down(xs) {
+    display: none!important;
+  }
+}
+.visible-xs {
+  display: none;
+  @include media-breakpoint-down(xs) {
+    display: block;
+  }
+}
+
+.spacing-xs {
+  @include media-breakpoint-down(xs) {
+    margin-bottom: calculate-rem($iscss-padding);
+  }
+}
+
+.spacing-top-xs {
+  @include media-breakpoint-down(xs) {
+    margin-top: calculate-rem($iscss-padding);
+  }
+}
+
+main {
+  position: relative;
+  background-color: $iscss-color__primary_white;
+  min-height: calculate-rem(500px);
+}
+
+.wrapper {
+  z-index: z("content");
+  height: 100%;
+}
+
+.content {
+  /* padding-top: calculate-rem($iscss-margin--huge);*/
+  /* padding-bottom: calculate-rem($iscss-margin--huge);*/
+}

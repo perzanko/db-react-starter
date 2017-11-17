@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    #70-organisms footer
+\*------------------------------------*/
+/*//*/
+/*/ @group footer*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-footer:   $iscss-namespace !default;
+
+.#{$iscss-namespace-footer}footer {
+  color: white;
+  padding-top: calculate-rem(50px);
+  background-color: #181818;
+  font-weight: 500;
+  &__bottom {
+    margin-top: calculate-rem(35px);
+    padding: calculate-rem(30px) 0;
+    background-color: #131313;
+    .make-right {
+      text-align: right;
+      @include media-breakpoint-down(xs) {
+        text-align: left;
+      }
+    }
+  }
+  &__nav {
+    list-style-type: none;
+    margin: 0 0 calculate-rem(30px);
+    padding: 0;
+    li {
+      padding: calculate-rem(2px) 0;
+      a {
+        color: white;
+      }
+    }
+  }
+  &__social {
+    margin-right: calculate-rem(30px);
+  }
+}

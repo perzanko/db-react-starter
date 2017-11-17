@@ -1,0 +1,123 @@
+/*------------------------------------*\
+    #50-molecules faq
+\*------------------------------------*/
+/*//*/
+/*/ @group faq*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-faq:   $iscss-namespace !default;
+
+
+.#{$iscss-namespace-faq}faq {
+  &__nav {
+    margin-top: calculate-rem(50px);
+    margin-bottom: calculate-rem(30px);
+    @include media-breakpoint-down(md) {
+      margin-top: calculate-rem(30px);
+    }
+    @include media-breakpoint-down(xs) {
+      margin: calculate-rem(10px) 0;
+    }
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      @include media-breakpoint-down(sm) {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      &__item {
+        cursor: pointer;
+        -ms-flex-preferred-size: 18%;
+        flex-basis: 18%;
+        border-radius: 10px;
+        background: #f6f6f6;
+        padding: calculate-rem(24px) calculate-rem(20px);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include iscss-transition();
+        span {
+          @include iscss-transition();
+          color: $color-text;
+          @include iscss-font-size(20px,1.4);
+          @include media-breakpoint-down(lg) {
+            @include iscss-font-size(16px,1.4);
+          }
+          font-weight: 500;
+        }
+        &--active {
+          background: $color-blue-light;
+          span {
+            color: white;
+          }
+        }
+        &:hover {
+          background: $color-blue-light;
+          span {
+            color: white;
+          }
+        }
+        @include media-breakpoint-down(md) {
+          padding: calculate-rem(15px) calculate-rem(12px);
+        }
+        @include media-breakpoint-down(md) {
+          -ms-flex-preferred-size: 30%;
+          flex-basis: 30%;
+          margin: 0 calculate-rem(8px) calculate-rem(20px);
+        }
+        @include media-breakpoint-down(xs) {
+          padding: calculate-rem(12px) calculate-rem(10px);
+          span {
+            @include iscss-font-size(16px, 1.4);
+          }
+          -ms-flex-preferred-size: 25%;
+          flex-basis: 25%;
+          margin: 0 calculate-rem(8px) calculate-rem(20px);
+        }
+      }
+    }
+  }
+  &__accordeon {
+    margin-bottom: calculate-rem(15px);
+    &__item {
+      &__question {
+        margin: calculate-rem(25px) 0 0 0;
+        font-weight: 500;
+        @include iscss-font-size(24px, 1.2);
+        margin-bottom: calculate-rem(5px);
+        span {
+          @include iscss-font-size(28px, 1.2);
+          color: $color-blue-light;
+        }
+      }
+      &__answer {
+        padding-bottom: calculate-rem(1px);
+        margin-bottom: calculate-rem(30px);
+        position: relative;
+        &:after {
+          content: " ";
+          position: absolute;
+          display: block;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+          width: calculate-rem(100px);
+          background-color: #eee;
+        }
+      }
+    }
+  }
+}

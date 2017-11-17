@@ -1,0 +1,394 @@
+/*------------------------------------*\
+    #60-molecules order-step-2
+\*------------------------------------*/
+/*//*/
+/*/ @group order-step-2*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-order-step-2:   $iscss-namespace !default;
+
+
+.#{$iscss-namespace-order-step-2}order-step-2 {
+
+  &--active {
+    opacity: 1;
+  }
+
+
+  &__frequency {
+    margin-top: calculate-rem(-20px);
+    margin-bottom: calculate-rem(40px);
+    @include media-breakpoint-down(md) {
+      margin-bottom: calculate-rem(35px);
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: calculate-rem(-20px);
+      margin-bottom: calculate-rem(35px);
+    }
+    @include media-breakpoint-down(xs) {
+      margin-bottom: calculate-rem(25px);
+    }
+    &__list {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      span {
+        margin: calculate-rem(15px) calculate-rem(10px) 0;
+        color: #bbb;
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+
+        -ms-flex-pack: distribute;
+
+        justify-content: space-around;
+      }
+
+    }
+    &__item {
+      @include iscss-transition();
+      cursor: pointer;
+      display: block;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      @include iscss-font-size(20px,1.2);
+      background-color: $color-grey-light;
+      color: $color-text;
+      padding: calculate-rem(15px) calculate-rem(25px);
+      border-radius: 100px;
+      margin: 0 calculate-rem(25px) calculate-rem(30px) calculate-rem(25px);
+      @include media-breakpoint-down(sm) {
+        margin: 0;
+        margin-bottom: calculate-rem(20px);
+        -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+        text-align: center;
+        @include iscss-font-size(16px,1.2);
+      }
+      @media (max-width: 500px) {
+        -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+      }
+      &--calendar {
+        position: relative;
+        padding-right: calculate-rem(60px);
+        &:before {
+          position: absolute;
+          width: calculate-rem(25px);
+          height: calculate-rem(25px);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          top: 50%;
+          right: calculate-rem(20px);
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          display: block;
+          content: " ";
+          background-image: url(/assets/images/icons/calendar.svg);
+          -webkit-transition: background-image .22s ease-in-out;
+          transition: background-image .22s ease-in-out;
+        }
+        &:hover {
+          &:before {
+            background-image: url(/assets/images/icons/calendar-white.svg);
+          }
+        }
+      }
+    }
+  }
+  &__service-type {
+    margin-top: calculate-rem(20px);
+    margin-bottom: calculate-rem(40px);
+    @include media-breakpoint-down(md) {
+      margin-bottom: calculate-rem(35px);
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: calculate-rem(35px);
+    }
+    @include media-breakpoint-down(xs) {
+      margin-bottom: calculate-rem(25px);
+    }
+    &__list {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      @include media-breakpoint-down(sm) {
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+      }
+
+    }
+    &__item {
+      @include iscss-transition();
+      cursor: pointer;
+      display: block;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      @include iscss-font-size(20px,1.2);
+      background-color: $color-grey-light;
+      color: $color-text;
+      padding: calculate-rem(15px) calculate-rem(25px);
+      border-radius: 100px;
+      margin: 0 calculate-rem(25px) calculate-rem(30px) calculate-rem(25px);
+      @include media-breakpoint-down(sm) {
+        margin: 0;
+        margin-bottom: calculate-rem(20px);
+        -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+        text-align: center;
+        @include iscss-font-size(16px,1.2);
+      }
+      @media (max-width: 500px) {
+        -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+      }
+    }
+  }
+
+  &__wrapper {
+    margin-bottom: calculate-rem(50px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  &__wrapper.calendar-date-form {
+    width: 100%;
+  }
+  &__details {
+    -ms-flex-preferred-size: 55%;
+    flex-basis: 55%;
+    @include media-breakpoint-down(sm) {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      margin-bottom: calculate-rem(20px);
+    }
+    &__form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      @include media-breakpoint-down(xs) {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+      }
+      &__dropdowns {
+        -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+        @include media-breakpoint-down(xs) {
+          -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+        }
+        .react-selectize,.input {
+          input {
+            cursor: pointer;
+          }
+          margin-bottom: calculate-rem(20px);
+        }
+      }
+      &__inputs {
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+        @include media-breakpoint-down(xs) {
+          -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+        }
+        .input,.react-selectize {
+          input {
+            cursor: pointer;
+          }
+          margin-bottom: calculate-rem(20px);
+        }
+        .button {
+          text-align: center;
+          font-size: 20px !important;
+          font-size: calculate-rem(20px) !important;
+        }
+      }
+      &__additional-info {
+        padding-left: 10px;
+        @include iscss-font-size(12px, 1);
+        font-weight: 300;
+        cursor: pointer;
+        display: block;
+
+      }
+    }
+  }
+  &__provider {
+    -ms-flex-preferred-size: 45%;
+    flex-basis: 45%;
+    padding-left: calculate-rem(60px);
+    text-align: center;
+    @include media-breakpoint-down(sm) {
+      text-align: left;
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      padding-left: 0;
+      > div {
+        button {
+          margin-left: calculate-rem(15px) !important;
+        }
+      }
+    }
+    .provider {
+      text-align: left;
+    }
+    .heading__tertiary {
+      text-align: left;
+    }
+    .button {
+      text-align: center;
+      margin: calculate-rem(20px) auto 0 auto;
+    }
+    span {
+      @include iscss-font-size(14px, 1.4);
+      color: #aaa;
+      display: block;
+    }
+  }
+  &__notice {
+    @include iscss-font-size(16px, 1.4);
+    font-weight: 400;
+    color: $color-green;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: calculate-rem(600px);
+    margin: calculate-rem(30px) auto calculate-rem(15px) auto;
+    @include iscss-transition();
+    img {
+      margin-right: 15px;
+      width: calculate-rem(45px);
+      height: calculate-rem(45px);
+    }
+    span {
+      text-align: left;
+      a {
+        font-weight: 500;
+      }
+    }
+  }
+  .succes {
+    opacity: 1;
+    color: $color-green;
+    span {
+      color: $color-green;
+      a {
+        color: $color-green;
+      }
+    }
+  }
+  .fail {
+    opacity: 1;
+    color: $color-red;
+    span {
+      color: $color-red;
+      a {
+        color: $color-red;
+      }
+    }
+  }
+  &--blue {
+    .order-step-2__frequency__list .order-step-2__frequency__item, .order-step-2__service-type__list .order-step-2__service-type__item {
+      &:hover {
+        color: white;
+        background-color: $color-blue !important;
+      }
+    }
+  }
+  &--ruby {
+    .order-step-2__frequency__list .order-step-2__frequency__item, .order-step-2__service-type__list .order-step-2__service-type__item {
+      &:hover {
+        color: white;
+        background-color: $color-ruby !important;
+      }
+    }
+  }
+  &--orange {
+    .order-step-2__frequency__list .order-step-2__frequency__item, .order-step-2__service-type__list .order-step-2__service-type__item {
+      &:hover {
+        color: white;
+        background-color: $color-orange !important;
+      }
+    }
+  }
+  &--green {
+    .order-step-2__frequency__list .order-step-2__frequency__item, .order-step-2__service-type__list .order-step-2__service-type__item {
+      &:hover {
+        color: white;
+        background-color: $color-green !important;
+      }
+    }
+  }
+  &--yellow {
+    .order-step-2__frequency__list .order-step-2__frequency__item, .order-step-2__service-type__list .order-step-2__service-type__item {
+      &:hover {
+        color: white;
+        background-color: $color-yellow !important;
+      }
+    }
+  }
+  .checkbox-active {
+    &:before {
+      background-image: url(/assets/images/icons/calendar-white.svg);
+    }
+  }
+}

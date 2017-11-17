@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #05-tools Math
+\*------------------------------------*/
+
+////
+/// @group math
+////
+
+
+@function quarter($inuit-number) {
+    @return round($inuit-number / 4);
+}
+
+@function halve($inuit-number) {
+    @return round($inuit-number / 2);
+}
+
+@function double($inuit-number) {
+    @return round($inuit-number * 2);
+}
+
+@function quadruple($inuit-number) {
+    @return round($inuit-number * 4);
+}

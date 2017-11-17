@@ -1,0 +1,199 @@
+/*------------------------------------*\
+    #50-atoms Buttons
+\*------------------------------------*/
+/*//*/
+/*/ @group buttons*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-buttons:             $iscss-namespace !default;
+/*/ @type px*/
+
+
+.#{$iscss-namespace-buttons}button {
+  display: inline-block;
+  background-color: $color-ruby;
+  border-radius: calculate-rem(100px);
+  color: white !important;
+  padding: calculate-rem(12px) calculate-rem(19px) calculate-rem(12px) calculate-rem(19px);
+  @include iscss-transition();
+  border: none;
+  &:hover {
+    opacity: 0.95;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  &--bold {
+    font-weight: 700 !important;
+  }
+  &--medium {
+    font-weight: 500 !important;
+  }
+  &--xbold {
+    font-weight: 800 !important;
+  }
+  &--small {
+    line-height: 1 !important;
+    font-size: 16px !important;
+    font-size: 1rem !important;
+    padding: calculate-rem(12px) calculate-rem(19px) calculate-rem(12px) calculate-rem(19px);
+  }
+  &--big {
+    @include iscss-font-size(20px,1);
+    padding: calculate-rem(14px) calculate-rem(45px) calculate-rem(14px) calculate-rem(45px);
+  }
+  &--form {
+    margin-bottom: calculate-rem(20px);
+    @include iscss-font-size(24px,1);
+    font-weight: 700;
+    padding: calculate-rem(12px) calculate-rem(45px) calculate-rem(12px) calculate-rem(45px);
+    border: none;
+    display: block;
+    width: 100%;
+    &:hover {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  &--facebook {
+    margin-bottom: calculate-rem(40px);
+    @include iscss-font-size(16px,1.2);
+    font-weight: 500;
+    padding: calculate-rem(16px) calculate-rem(16px) calculate-rem(16px) calculate-rem(16px);
+    border: none;
+    display: block;
+    width: 100%;
+    background-color: #3b5998;
+    &:hover {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  &--huge {
+    @include iscss-font-size(28px,1);
+    padding: calculate-rem(18px) calculate-rem(90px) calculate-rem(18px) calculate-rem(90px);
+    @include media-breakpoint-down(sm) {
+      @include iscss-font-size(20px,1);
+      padding-right: calculate-rem(30px);
+      padding-left: calculate-rem(30px);
+    }
+  }
+  &--uppercase {
+    text-transform: uppercase;
+  }
+  &--ruby {
+    background-color: $color-ruby;
+  }
+  &--green {
+    background-color: $color-green;
+  }
+  &--yellow {
+    background-color: $color-yellow;
+  }
+  &--grey {
+    background-color: #bbbbbb;
+  }
+  &--orange {
+    background-color: $color-orange;
+  }
+  &--blue {
+    background-color: $color-blue;
+  }
+  &--blue-light {
+    background-color: $color-blue-light;
+  }
+  &--gradient {
+    background: #0496ff;
+    background: -moz-linear-gradient(-45deg, #0496ff 0%, #0079bf 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, #0496ff), color-stop(100%, #0079bf));
+    background: -webkit-linear-gradient(-45deg, #0496ff 0%, #0079bf 100%);
+    background: -o-linear-gradient(-45deg, #0496ff 0%, #0079bf 100%);
+    background: -ms-linear-gradient(-45deg, #0496ff 0%, #0079bf 100%);
+    background: linear-gradient(135deg, #0496ff 0%, #0079bf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0496ff', endColorstr='#0079bf', GradientType=1 );
+  }
+  &--paginate-right {
+    line-height: 1 !important;
+    font-size: 16px !important;
+    font-size: 1rem !important;
+    padding: calculate-rem(12px) calculate-rem(49px) calculate-rem(12px) calculate-rem(19px);
+    position: relative;
+    &:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      right: calculate-rem(14px);
+      width: calculate-rem(25px);
+      height: calculate-rem(25px);
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      background-image: url(/assets/images/icons/arrow-right-white.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  &--paginate-left {
+    line-height: 1 !important;
+    font-size: 16px !important;
+    font-size: 1rem !important;
+    padding: calculate-rem(12px) calculate-rem(19px) calculate-rem(12px) calculate-rem(49px);
+    position: relative;
+    &:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      left: calculate-rem(14px);
+      width: calculate-rem(25px);
+      height: calculate-rem(25px);
+      top: 50%;
+      -webkit-transform: translateY(-50%) rotate(180deg);
+      transform: translateY(-50%) rotate(180deg);
+      background-image: url(/assets/images/icons/arrow-right-white.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  &--coupon {
+    line-height: 1 !important;
+    font-size: 14px !important;
+    font-size: .875rem !important;
+    padding: calculate-rem(10px) calculate-rem(14px);
+  }
+  &--search {
+    line-height: 1 !important;
+    font-size: 16px !important;
+    font-size: 1rem !important;
+    padding: calculate-rem(12px) calculate-rem(49px) calculate-rem(12px) calculate-rem(19px);
+    position: relative;
+    &:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      right: calculate-rem(14px);
+      width: calculate-rem(25px);
+      height: calculate-rem(25px);
+      top: 52%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      background-image: url(/assets/images/icons/search-white.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  &--remove {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    &__wrapper  {
+      text-align: right;
+    }
+  }
+}

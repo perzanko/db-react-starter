@@ -1,0 +1,212 @@
+/*------------------------------------*\
+    #80-templates service
+\*------------------------------------*/
+/*//*/
+/*/ @group service*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-service:   $iscss-namespace !default;
+
+.#{$iscss-namespace-service}service {
+  overflow: hidden;
+  opacity: 0;
+  @include iscss-transition();
+  &--active {
+    opacity: 1;
+  }
+  margin: 0;
+  background-color: $color-blue;
+  &:before {
+    content: " ";
+    display: block;
+    min-width: 107%;
+    left: -3.5%;
+    bottom: 3.5%;
+    height: 100%;
+    background-image: url(/assets/images/order-wave.svg);
+    background-position: center;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    @include iscss-transition(1.2s);
+    -webkit-transform: translateX(-1%);
+    transform: translateX(-1%);
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+    @include media-breakpoint-up(sm) {
+      animation-name: flowing;
+      animation-duration: 9s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    }
+  }
+  &:after {
+    content: " ";
+    display: block;
+    min-width: 106%;
+    left: -3%;
+    height: 100%;
+    bottom: -1%;
+    background-image: url(/assets/images/order-wave2.svg);
+    background-position: center;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    @include iscss-transition(1s);
+    @include media-breakpoint-down(sm) {
+      left: 50%;
+      top: -10px;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      height: 101%;
+      background-size: cover;
+      bottom: 0;
+    }
+    @include media-breakpoint-up(md) {
+      animation-name: flowing-2;
+      animation-duration: 8s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    }
+  }
+  &--type {
+    &:before {
+      background-image: url(/assets/images/order-wave-reverse.svg);
+    }
+    &:after {
+      background-image: url(/assets/images/order-wave2-reverse.svg);
+    }
+  }
+  @media (min-width:1600px) {
+    &:before {
+      bottom: -10% !important;
+    }
+    &:after {
+      bottom: -12% !important;
+    }
+  }
+  &__description {
+    margin: calculate-rem(120px) 0;
+    @include iscss-transition();
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    background-color: white;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 14px 18px 0px rgba(0, 0, 0, 0.21);
+    box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.21);
+    padding: calculate-rem(40px);
+    @include media-breakpoint-down(md) {
+      margin: calculate-rem(80px) 0;
+    }
+    @include media-breakpoint-down(xs) {
+      padding: calculate-rem(30px) calculate-rem(15px);
+      margin: calculate-rem(50px) 0;
+    }
+    @media (max-width: 350px) {
+      // margin-top: 2px;
+      // border-radius: 0;
+      margin-top: calculate-rem(50px);
+      width: calc(100% + 10px);
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+  }
+  &__cta {
+    padding: calculate-rem(40px) 0;
+    margin: calculate-rem(120px) 0;
+    @include iscss-transition();
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    color: white;
+    @include media-breakpoint-down(md) {
+      margin: 0;
+      padding: 0;
+      margin-bottom: calculate-rem(80px);
+    }
+    @include media-breakpoint-down(xs) {
+      margin-bottom: calculate-rem(40px);
+    }
+    h1,h2,h3,h4,h5,h6 {
+      @include iscss-font-size(36px, 1.2);
+    }
+    ul {
+      margin: 0;
+      margin-top: calculate-rem(30px);
+      span {
+        display: block;
+        @include iscss-font-size(14px,1.3);
+        margin-bottom: calculate-rem(15px);
+      }
+      li {
+        @include iscss-font-size(16px,1.7);
+        margin-left: calculate-rem(15px);
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+  &__title {
+    margin-bottom: calculate-rem($iscss-margin--large * 0.65);
+    text-align: center;
+    img {
+      margin-bottom: calculate-rem(15px);
+      width: 100%;
+      display: block;
+    }
+  }
+  &__list {
+    list-style-type: none;
+    margin: 0 0 0 calculate-rem(15px);
+    li {
+      font-weight: 500;
+      @include iscss-font-size(20px, 1.7);
+      padding-left: calculate-rem(40px);
+      img {
+        max-width: calculate-rem(20px);
+        max-height: calculate-rem(20px);
+        margin-right: calculate-rem(20px);
+        margin-left: calculate-rem(-40px)
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      li {
+        @include iscss-font-size(18px, 1.7);
+      }
+    }
+    @include media-breakpoint-down(xs) {
+      li {
+        @include iscss-font-size(16px, 1.7);
+      }
+    }
+  }
+  &__back {
+    display: block;
+    color: white;
+    @include iscss-font-size(14px, 1);
+    font-weight: 300;
+    position: relative;
+    margin-bottom: calculate-rem(15px);
+    &:before {
+      content: " ";
+      display: inline-block;
+      width: calculate-rem(15px);
+      height: calculate-rem(15px);
+      background-image: url(/assets/images/icons/arrow-right-white.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: rotate(180deg);
+      margin-right: calculate-rem(7px);
+      margin-bottom: -2px;
+    }
+  }
+}

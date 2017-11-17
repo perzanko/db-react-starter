@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #50-atoms paragraph
+\*------------------------------------*/
+/*//*/
+/*/ @group paragraph*/
+/*//*/
+
+$iscss-namespace-paragraph:   $iscss-namespace !default;
+.#{$iscss-namespace-paragraph}paragraph {
+  color: $color-text;
+  @include iscss-font-size(18px,1.5);
+  &--medium {
+    font-weight: 500;
+  }
+  &--regular {
+    font-weight: 400;
+  }
+  &--bold {
+    font-weight: 700;
+  }
+  &--white {
+    color: white;
+  }
+  &--small {
+    @include iscss-font-size(16px, 1.5);
+  }
+}

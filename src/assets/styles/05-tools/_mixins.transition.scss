@@ -1,0 +1,9 @@
+/* ------------------------------------- *\
+    #05-tools Transition
+\* ------------------------------------- */
+
+
+@mixin iscss-transition($property: all, $duration: .22s) {
+          transition-delay: 0;
+  transition: $property $duration cubic-bezier(.45,.74,.76,.99) ;
+}

@@ -1,0 +1,208 @@
+/*------------------------------------*\
+    #60-molecules order-header
+\*------------------------------------*/
+/*//*/
+/*/ @group order-header*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-order-header:   $iscss-namespace !default;
+
+
+.#{$iscss-namespace-order-header}order-header {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+
+  opacity: 0;
+  margin-bottom: calculate-rem(20px);
+  @include iscss-transition();
+  &--active {
+    opacity: 1;
+  }
+  &__pagination {
+    cursor: pointer;
+    padding-top: calculate-rem(30px);
+    margin: 0 auto;
+    max-width: calculate-rem(600px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+    &__item {
+      -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+      padding: calculate-rem(5px);
+      position: relative;
+      span {
+        cursor: pointer;
+        text-align: center;
+        display: block;
+        @include iscss-font-size(14px, 1.3);
+        font-weight: 500;
+        color: $color-grey;
+        @include iscss-transition();
+      }
+      &:before {
+        cursor: pointer;
+        @include iscss-transition();
+        content: " ";
+        display: block;
+        width: calculate-rem(15px);
+        height: calculate-rem(15px);
+        -webkit-transition-delay: .3s;
+        transition-delay: .3s;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background-color: $color-grey;
+        border-radius: 100%;
+      }
+      &:after {
+        @include iscss-transition();
+        content: " ";
+        display: block;
+        width: calc(100% - 36px);
+        height: calculate-rem(4px);
+        position: absolute;
+        top: -14px;
+        right: calc(50% + 18px);
+        background-color: $color-grey-light;
+      }
+      &:first-child {
+        &:after {
+          display: none;
+        }
+      }
+
+    }
+    .active {
+      span {
+        color: $color-text;
+      }
+      &:before {
+        background-color: $color-ruby;
+      }
+      &:after {
+        background-color: $color-ruby;
+        opacity: 0.3;
+      }
+    }
+    .done {
+      &:before {
+        background-color: $color-ruby;
+      }
+      &:after {
+        background-color: $color-ruby;
+        opacity: 0.3;
+      }
+    }
+    .active--ruby {
+      span {
+        color: $color-text;
+      }
+      &:before {
+        background-color: $color-ruby;
+      }
+      &:after {
+        background-color: $color-ruby;
+        opacity: 0.3;
+      }
+    }
+    .done--ruby {
+      &:before {
+        background-color: $color-ruby;
+      }
+      &:after {
+        background-color: $color-ruby;
+        opacity: 0.3;
+      }
+    }
+    .active--yellow {
+      span {
+        color: $color-text;
+      }
+      &:before {
+        background-color: $color-yellow;
+      }
+      &:after {
+        background-color: $color-yellow;
+        opacity: 0.3;
+      }
+    }
+    .done--yellow {
+      &:before {
+        background-color: $color-yellow;
+      }
+      &:after {
+        background-color: $color-yellow;
+        opacity: 0.3;
+      }
+    }
+    .active--blue {
+      span {
+        color: $color-text;
+      }
+      &:before {
+        background-color: $color-blue;
+      }
+      &:after {
+        background-color: $color-blue;
+        opacity: 0.3;
+      }
+    }
+    .done--blue {
+      &:before {
+        background-color: $color-blue;
+      }
+      &:after {
+        background-color: $color-blue;
+        opacity: 0.3;
+      }
+    }
+    .active--green {
+      span {
+        color: $color-text;
+      }
+      &:before {
+        background-color: $color-green;
+      }
+      &:after {
+        background-color: $color-green;
+        opacity: 0.3;
+      }
+    }
+    .done--green {
+      &:before {
+        background-color: $color-green;
+      }
+      &:after {
+        background-color: $color-green;
+        opacity: 0.3;
+      }
+    }
+    .active--orange {
+      span {
+        color: $color-text;
+      }
+      &:before {
+        background-color: $color-orange;
+      }
+      &:after {
+        background-color: $color-orange;
+        opacity: 0.3;
+      }
+    }
+    .done--orange {
+      &:before {
+        background-color: $color-orange;
+      }
+      &:after {
+        background-color: $color-orange;
+        opacity: 0.3;
+      }
+    }
+  }
+}

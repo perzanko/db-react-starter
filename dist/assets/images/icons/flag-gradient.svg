@@ -1,0 +1,39 @@
+<svg id="745efa9a-d524-4878-98dd-2a8bfd41d764" data-name="Warstwa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .\35 676c174-ab1c-4d4e-9696-a6d4b2e8fbf6 {
+        mask: url(#7ca10a54-a9da-4f42-9853-6fa924541b67);
+      }
+
+      .c71e9606-24f3-440c-8c0c-15390a4b095d {
+        fill: url(#8598dd80-e9f0-4529-9f4d-917430d08457);
+      }
+
+      .\30 94e6c27-927b-43e9-b675-4c2ef825099a {
+        filter: url(#5b87b4a7-6638-4e53-a54a-ed701471b2f5);
+      }
+    </style>
+    <filter id="5b87b4a7-6638-4e53-a54a-ed701471b2f5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feColorMatrix values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/>
+    </filter>
+    <mask id="7ca10a54-a9da-4f42-9853-6fa924541b67" x="0" y="0" width="20" height="20" maskUnits="userSpaceOnUse">
+      <g class="094e6c27-927b-43e9-b675-4c2ef825099a">
+        <g transform="translate(0 0)">
+          <g>
+            <path d="M1.5,20A0.5,0.5,0,0,1,1,19.5V4.5a0.5,0.5,0,1,1,1,0v15A0.5,0.5,0,0,1,1.5,20Z"/>
+            <path d="M15.5,14a5.7,5.7,0,0,1-4.35-2.15A4.69,4.69,0,0,0,7.5,10a4.69,4.69,0,0,0-3.65,1.85,0.5,0.5,0,0,1-.71-0.71A5.7,5.7,0,0,1,7.5,9a5.7,5.7,0,0,1,4.35,2.15A4.69,4.69,0,0,0,15.5,13,4.51,4.51,0,0,0,19,11.29V5.67A5,5,0,0,1,15.5,7a5.7,5.7,0,0,1-4.35-2.15A4.69,4.69,0,0,0,7.5,3,4.69,4.69,0,0,0,3.85,4.85a0.5,0.5,0,1,1-.71-0.71A5.7,5.7,0,0,1,7.5,2a5.7,5.7,0,0,1,4.35,2.15A4.69,4.69,0,0,0,15.5,6a4.69,4.69,0,0,0,3.65-1.85A0.5,0.5,0,0,1,20,4.5v7a0.5,0.5,0,0,1-.15.35A5.7,5.7,0,0,1,15.5,14h0Z"/>
+            <path d="M1.5,3A1.5,1.5,0,1,1,3,1.5,1.5,1.5,0,0,1,1.5,3Zm0-2a0.5,0.5,0,1,0,.5.5A0.5,0.5,0,0,0,1.5,1Z"/>
+          </g>
+        </g>
+      </g>
+    </mask>
+    <linearGradient id="8598dd80-e9f0-4529-9f4d-917430d08457" data-name="Gradient bez nazwy 7" x1="0.76" y1="0.8" x2="19.32" y2="19.28" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0495ff"/>
+      <stop offset="1" stop-color="#0079bf"/>
+    </linearGradient>
+  </defs>
+  <title>flag-gradient</title>
+  <g class="5676c174-ab1c-4d4e-9696-a6d4b2e8fbf6">
+    <rect class="c71e9606-24f3-440c-8c0c-15390a4b095d" width="20" height="20"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+/* ------------------------------------- *\
+    #05-tools Scope
+\* ------------------------------------- */
+
+/* Wrap all styles in project global class.
+ * Leave empty to output styles directly
+ * (apply to all html)
+ */
+@mixin iscss-project-scope($scopeSelector: $iscss-project-scope) {
+  @if $scopeSelector == " " or $scopeSelector == "" {
+    @content;
+  }
+  @else {
+    #{$scopeSelector} {
+      @content;
+    }
+  }
+}

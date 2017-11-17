@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #60-molecules text-section
+\*------------------------------------*/
+/*//*/
+/*/ @group text-section*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-text-section:   $iscss-namespace !default;
+
+
+.#{$iscss-namespace-text-section}text-section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calculate-rem(700px);
+  text-align: center;
+  margin-bottom: calculate-rem(90px);
+  @include media-breakpoint-down(md) {
+    margin-bottom: calculate-rem(50px);
+  }
+}

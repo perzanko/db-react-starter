@@ -1,0 +1,98 @@
+/*------------------------------------*\
+    #60-molecules order-step-3
+\*------------------------------------*/
+/*//*/
+/*/ @group order-step-3*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-order-step-3:   $iscss-namespace !default;
+
+
+.#{$iscss-namespace-order-step-3}order-step-3 {
+  &--active {
+    opacity: 1;
+  }
+  &__form {
+    max-width: calculate-rem(700px);
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    .input,.textarea, .checkbox {
+      -ms-flex-preferred-size: calc(50% - 10px);
+      flex-basis: calc(50% - 10px);
+      @include media-breakpoint-down(xs) {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+      }
+    }
+
+    .input--small {
+      -ms-flex-preferred-size: calc(30% - 10px);
+      flex-basis: calc(30% - 10px);
+      @include media-breakpoint-down(xs) {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+      }
+    }
+    .input {
+      &:nth-child(odd) {
+        margin-right: calculate-rem(20px);
+        @include media-breakpoint-down(xs) {
+          margin-right: 0;
+        }
+      }
+    }
+    .textarea {
+      margin-right: calculate-rem(20px);
+      @include media-breakpoint-down(xs) {
+        margin-right: 0;
+      }
+    }
+    .checkbox {
+      margin-bottom: calculate-rem(20px);
+      &:nth-child(odd) {
+        margin-right: calculate-rem(20px);
+        @include media-breakpoint-down(xs) {
+          margin-right: 0;
+        }
+      }
+      &--company {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+      }
+    }
+    .invoice-wrapper {
+      flex-basis: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      // .input {
+      //   &:nth-child(odd) {
+      //     margin-right: calculate-rem(20px);
+      //     @include media-breakpoint-down(xs) {
+      //       margin-right: 0;
+      //     }
+      //   }
+      //   &:nth-child(even) {
+      //     margin-right: 0;
+      //   }
+      // }
+      // .checkbox {
+      //   margin-bottom: calculate-rem(20px);
+      //   &:nth-child(odd) {
+      //     margin-right: calculate-rem(20px);
+      //     @include media-breakpoint-down(xs) {
+      //       margin-right: 0;
+      //     }
+      //   }
+      //   &:nth-child(even) {
+      //     margin-right: 0;
+      //   }
+      // }
+    }
+  }
+}

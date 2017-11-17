@@ -1,0 +1,81 @@
+/*------------------------------------*\
+    #50-atoms headings
+\*------------------------------------*/
+/*//*/
+/*/ @group headings*/
+/*//*/
+
+h1 {
+  @include iscss-font-size($iscss-font-size--xxxxxxl + 12px, 1);
+  font-weight: $iscss-font-weight--bold;
+  @include media-breakpoint-down(md) {
+    @include iscss-font-size($iscss-font-size--xxxxxl + 12px, 1);
+  }
+}
+
+h2 {
+  @include iscss-font-size($iscss-font-size--xxxxxl + 12px, 1.2);
+  font-weight: $iscss-font-weight--bold;
+  @include media-breakpoint-down(md) {
+    @include iscss-font-size($iscss-font-size--xxxl + 12px, 1.2);
+  }
+}
+
+h3 {
+  @include iscss-font-size($iscss-font-size--xxxl + 12px, 1.2);
+  font-weight: $iscss-font-weight--bold;
+  @include media-breakpoint-down(md) {
+    @include iscss-font-size($iscss-font-size--xl + 12px, 1.2);
+  }
+}
+
+h4 {
+  @include iscss-font-size($iscss-font-size--lg + 12px, 1.2);
+  font-weight: $iscss-font-weight--bold;
+}
+
+h5 {
+  @include iscss-font-size($iscss-font-size--md + 12px);
+  font-weight: $iscss-font-weight--bold;
+}
+
+h6 {
+  @include iscss-font-size($iscss-font-size--sm + 12px);
+  font-weight: $iscss-font-weight--bold;
+}
+
+$iscss-namespace-headings:   $iscss-namespace !default;
+.#{$iscss-namespace-headings}heading {
+  color: $color-text;
+  &__primary {
+    color: $color-text;
+    @include iscss-font-size(48px,1.3);
+    @include media-breakpoint-down(md) {
+      @include iscss-font-size(36px,1.3);
+    }
+  }
+  &__secondary {
+    color: $color-text;
+    @include iscss-font-size(36px,1.3);
+    @include media-breakpoint-down(md) {
+      @include iscss-font-size(24px,1.3);
+    }
+  }
+  &__tertiary {
+    color: $color-text;
+    font-weight: 500;
+    @include iscss-font-size(24px,1.3);
+    @include media-breakpoint-down(md) {
+      @include iscss-font-size(20px,1.3);
+    }
+  }
+  &--center {
+    text-align: center;
+  }
+  &--white {
+    color: white;
+  }
+  &--no-margin {
+    margin: 0;
+  }
+}

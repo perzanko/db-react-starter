@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    #80-templates contact
+\*------------------------------------*/
+/*//*/
+/*/ @group contact*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-contact:   $iscss-namespace !default;
+
+.#{$iscss-namespace-contact}contact {
+  .form {
+    padding: calculate-rem($iscss-padding) 0;
+  }
+  .icon-section__wrapper {
+    @include media-breakpoint-down(md) {
+      padding-bottom: 0;
+      padding-top: calculate-rem($iscss-padding--large);
+    }
+  }
+  .icon-section__item {
+    @include media-breakpoint-down(xs) {
+      margin: 0;
+    }
+  }
+}

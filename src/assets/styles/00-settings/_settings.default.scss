@@ -1,0 +1,47 @@
+/*---------------------------------------------------*\
+    #00-settings Default
+\*---------------------------------------------------*/
+
+/*//*/
+/*/ @group default*/
+/*//*/
+
+/* Namespace.*/
+/**/
+/* Would you like iscss’ classes to be prepended with a namespace? If so,*/
+/* define it here.*/
+
+/*/ @type namespace*/
+$iscss-namespace:               null !default;
+/*/ @type font-family*/
+$iscss-project-scope:           null !default;
+
+
+/* High-level base settings.*/
+
+/*/ @type base*/
+$iscss-base-font-size:          16px !default;
+/*/ @type base*/
+$iscss-base-line-height:        24px !default;
+/*/ @type hex*/
+$iscss-base-text-color:         $iscss-color__primary_black !default;
+/*/ @type hex*/
+$iscss-base-background-color:   $iscss-color__primary_white !default;
+
+
+/* These variables are framework variables, sourced from variables defined*/
+/* above. Feel free to use these variables throughout your project, but do not*/
+/* modify or reassign them.*/
+
+/*/ @type base*/
+$iscss-base-spacing-unit:           $iscss-base-line-height;
+/*/ @type base*/
+$iscss-base-spacing-unit--tiny:     round($iscss-base-spacing-unit / 4);
+/*/ @type base*/
+$iscss-base-spacing-unit--small:    round($iscss-base-spacing-unit / 2);
+/*/ @type base*/
+$iscss-base-spacing-unit--large:    round($iscss-base-spacing-unit * 2);
+/*/ @type base*/
+$iscss-base-spacing-unit--huge:     round($iscss-base-spacing-unit * 4);
+/*/ @type base*/
+$iscss-base-spacing-unit--mwg:      round($iscss-base-spacing-unit * 3);

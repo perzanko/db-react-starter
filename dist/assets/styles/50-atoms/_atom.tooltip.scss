@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    #50-atoms tooltip
+\*------------------------------------*/
+/*//*/
+/*/ @group tooltip*/
+/*//*/
+
+$iscss-namespace-tooltip:   $iscss-namespace !default;
+.#{$iscss-namespace-tooltip}__react_component_tooltip {
+  background-color: $color-text !important;
+  border-radius: 10px !important;
+  line-height: 1.4 !important;
+  padding: 16px 21px !important;
+  &:after {
+    border-top-color: $color-text !important;
+
+  }
+
+}

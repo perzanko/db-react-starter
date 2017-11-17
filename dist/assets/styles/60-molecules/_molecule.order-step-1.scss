@@ -1,0 +1,273 @@
+/*------------------------------------*\
+    #60-molecules order-step-1
+\*------------------------------------*/
+/*//*/
+/*/ @group order-step-1*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-order-step-1:   $iscss-namespace !default;
+
+
+.#{$iscss-namespace-order-step-1}order-step-1 {
+  opacity: 0;
+  &--active {
+    opacity: 1;
+  }
+  &__search {
+    text-align: center;
+    &__form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      .input {
+        -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+        margin: 0 calculate-rem(5px);
+      }
+      .button {
+        @include iscss-font-size(18px,1);
+        font-size: 18px !important;
+        font-size: calculate-rem(18px) !important;
+        padding: calculate-rem(13px) calculate-rem(49px) calculate-rem(13px) calculate-rem(19px);
+        margin-bottom: calculate-rem(20px);
+        margin-left: calculate-rem(30px);
+      }
+      @include media-breakpoint-down(xs) {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        .input {
+          -ms-flex-preferred-size: 90%;
+          flex-basis: 90%;
+        }
+        .button {
+          margin-left: 0;
+          -ms-flex-preferred-size: 90%;
+          flex-basis: 90%;
+        }
+      }
+    }
+    &__notice {
+      @include iscss-font-size(16px, 1.4);
+      font-weight: 400;
+      color: $color-green;
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      max-width: calculate-rem(600px);
+      margin: calculate-rem(30px) auto calculate-rem(15px) auto;
+      @include iscss-transition();
+      opacity: 0;
+      img {
+        margin-right: 15px;
+        width: calculate-rem(45px);
+        height: calculate-rem(45px);
+      }
+      span {
+        text-align: left;
+        a {
+          font-weight: 500;
+        }
+      }
+    }
+    .succes {
+      opacity: 1;
+      color: $color-green;
+      span {
+        color: $color-green;
+        a {
+          color: $color-green;
+        }
+      }
+    }
+    .fail {
+      opacity: 1;
+      color: $color-red;
+      span {
+        color: $color-red;
+        a {
+          color: $color-red;
+        }
+      }
+    }
+  }
+
+  &__services {
+    &__title {
+      margin-top: calculate-rem(20px);
+    }
+    &__wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: center;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    &__item {
+      -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+      text-align: center;
+      cursor: pointer;
+
+      figure {
+        figcaption {
+          margin-top: calculate-rem(18px);
+          @include iscss-font-size(18px,1.3);
+          font-weight: 700;
+          text-transform: uppercase;
+          color: $color-text;
+        }
+        div {
+          @include iscss-transition();
+          margin-right: auto;
+          margin-left: auto;
+          width: 160px;
+          height: 160px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          padding: calculate-rem(30px);
+          border-radius: 100%;
+          position: relative;
+          background-color: $color-grey-lightest;
+          -webkit-box-shadow: inset 0px 0px 0px 4px;
+          -moz-box-shadow: inset 0px 0px 0px 4px;
+          box-shadow: inset 0px 0px 0px 4px;
+          img {
+            position: relative;
+            z-index: 1;
+            width: calculate-rem(80px);
+            height: calculate-rem(80px);
+          }
+        }
+      }
+      @include media-breakpoint-down(md) {
+        -ms-flex-preferred-size: 30%;
+        flex-basis: 30% !important;
+        padding: 20px;
+      }
+      @include media-breakpoint-down(sm) {
+        -ms-flex-preferred-size: 30%;
+        flex-basis: 30% !important;
+        padding: 20px;
+        figure {
+          figcaption {
+            margin-top: calculate-rem(14px);
+            @include iscss-font-size(13px,1.3);
+          }
+          div {
+            width: 120px;
+            height: 120px;
+            padding: calculate-rem(20px);
+          }
+        }
+      }
+      @media (max-width:450px) {
+
+        -ms-flex-preferred-size: 30%;
+        flex-basis: 30% !important;
+        padding: 20px;
+        figure {
+          margin: 0;
+          figcaption {
+            margin-top: calculate-rem(14px);
+            @include iscss-font-size(13px,1.3);
+          }
+          div {
+            width: 80px;
+            height: 80px;
+            padding: calculate-rem(10px);
+            img {
+              width: 50px;
+              height: 50px;
+            }
+          }
+        }
+      }
+      &--ruby {
+        &:hover {
+          figure {
+            div {
+              -webkit-box-shadow: inset 0px 0px 0px 4px $color-ruby;
+              -moz-box-shadow: inset 0px 0px 0px 4px $color-ruby;
+              box-shadow: inset 0px 0px 0px 4px $color-ruby;
+            }
+          }
+        }
+      }
+      &--yellow {
+        &:hover {
+          figure {
+            div {
+              -webkit-box-shadow: inset 0px 0px 0px 4px $color-yellow;
+              -moz-box-shadow: inset 0px 0px 0px 4px $color-yellow;
+              box-shadow: inset 0px 0px 0px 4px $color-yellow;
+            }
+          }
+        }
+      }
+      &--blue {
+        &:hover {
+          figure {
+            div {
+              -webkit-box-shadow: inset 0px 0px 0px 4px $color-blue;
+              -moz-box-shadow: inset 0px 0px 0px 4px $color-blue;
+              box-shadow: inset 0px 0px 0px 4px $color-blue;
+            }
+          }
+        }
+      }
+      &--green {
+        &:hover {
+          figure {
+            div {
+              -webkit-box-shadow: inset 0px 0px 0px 4px $color-green;
+              -moz-box-shadow: inset 0px 0px 0px 4px $color-green;
+              box-shadow: inset 0px 0px 0px 4px $color-green;
+            }
+          }
+        }
+      }
+      &--orange {
+        &:hover {
+          figure {
+            div {
+              -webkit-box-shadow: inset 0px 0px 0px 4px $color-orange;
+              -moz-box-shadow: inset 0px 0px 0px 4px $color-orange;
+              box-shadow: inset 0px 0px 0px 4px $color-orange;
+            }
+          }
+        }
+      }
+    }
+  }
+}

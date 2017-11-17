@@ -1,0 +1,103 @@
+/*------------------------------------*\
+    #30-global Utilities
+\*------------------------------------*/
+
+/**
+ * Global classes useful for overriding default Bootstrap properties, modifying
+ * objects and stuff
+**/
+
+.iscss-visible {
+  display: block !important;
+}
+
+.iscss-hidden {
+  display: none !important;
+}
+
+svg {
+  max-width: 100%;
+}
+
+.logo-svg {
+  max-width: 233px;
+  max-height: 40px;
+  width: 100%;
+}
+
+.row:before,.row:after {
+    display: none;
+}
+
+.row {
+  &--valign {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+hr {
+  border: 1px solid rgba(82, 84, 84, 0.1);
+  margin: 30px 0;
+}
+
+
+button, input {
+  &:focus, &:active { outline: none; }
+}
+
+strong { font-weight: $iscss-font-weight--bold; }
+u { text-decoration: underline; }
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}
+
+.no-overflow {
+  overflow: visible !important;
+}
+
+.margin-bootom-28 {
+  margin-bottom: calculate-rem($iscss-margin * 1.15);
+}
+
+.margin-bootom-10 {
+  margin-bottom: calculate-rem(10px);
+}
+
+.no-margin {
+  margin: 0;
+}
+
+#dumeo-app {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hide {
+  visibility: hidden !important;
+}
+
+hr {
+  border-color: #eeeeee;
+}
+
+main {
+  margin-bottom: calculate-rem(60px);
+}
+
+ul.list-unstyled {
+  list-style-type: none;
+  li {
+    margin-bottom: calculate-rem(12px);
+  }
+}

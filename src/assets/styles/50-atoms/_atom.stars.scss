@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    #50-atoms vote
+\*------------------------------------*/
+/*//*/
+/*/ @group vote*/
+/*//*/
+
+$iscss-namespace-vote:   $iscss-namespace !default;
+.#{$iscss-namespace-vote}stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  &__wrapper {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    span.stars__count {
+      margin-top: calculate-rem(8px);
+      margin-left: calculate-rem(5px);
+      display: inline-block;
+      @include iscss-font-size(16px, 1);
+      color: #bbbbbb;
+    }
+    span.stars__rate {
+      margin-top: calculate-rem(8px);
+      margin-left: calculate-rem(5px);
+      margin-right: calculate-rem(5px);
+      display: inline-block;
+      @include iscss-font-size(16px, 1);
+      color: $color-text;
+      font-weight: 500;
+    }
+  }
+  .jq-star {
+    display: block;
+    height: calculate-rem(23px) !important;
+    width: calculate-rem(20px) !important;
+    padding: calculate-rem(2px) calculate-rem(1px);
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

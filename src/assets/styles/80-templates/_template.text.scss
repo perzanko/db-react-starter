@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    #80-templates text
+\*------------------------------------*/
+/*//*/
+/*/ @group text*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-text:   $iscss-namespace !default;
+
+.#{$iscss-namespace-text}text {
+  .icon-section__wrapper {
+    @include media-breakpoint-down(md) {
+      margin-top: calculate-rem($iscss-margin);
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<svg id="67f5faf5-2969-48ef-badc-56bb16d9f1fe" data-name="9311685e-33cc-4d6e-9a5f-187803aa7532" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 383 128.17">
+  <defs>
+    <style>
+      .\33 dd983ce-4fd2-4dbe-a637-4e5e49c4b378 {
+        fill: url(#19dd3f5f-2e22-4df8-bda9-e6c4b9a2ffa8);
+      }
+    </style>
+    <linearGradient id="19dd3f5f-2e22-4df8-bda9-e6c4b9a2ffa8" data-name="Gradient bez nazwy" x1="-113.2" y1="-84.6" x2="273.66" y2="-110.7" gradientTransform="matrix(1, 0, 0, -1, 115, -27.35)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0079bf"/>
+      <stop offset="1" stop-color="#0495ff"/>
+    </linearGradient>
+  </defs>
+  <title>order-wave2-reverse</title>
+  <path class="3dd983ce-4fd2-4dbe-a637-4e5e49c4b378" d="M383,128.15H3.51l-3.51-1V30c18.32-5.88,36.45-11.12,52.32-15C114.55-.21,225.19-14.88,383,30.12v98Z" transform="translate(0 0.02)"/>
+</svg>

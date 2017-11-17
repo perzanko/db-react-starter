@@ -1,0 +1,346 @@
+/* ------------------------------------- *\
+    #05-tools Spacing
+\* ------------------------------------- */
+
+/**
+ * Margin and padding helper classes. Use these to tweak layout on a micro
+ * level.
+ *
+ * `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+ */
+
+// Predefine the variables below in order to alter and enable specific features.
+$iscss-spacing-namespace:               $iscss-namespace !default;
+
+$iscss-margin:                          $iscss-base-spacing-unit !default;
+$iscss-margin--small:                       halve($iscss-margin) !default;
+$iscss-margin--tiny:                      quarter($iscss-margin) !default;
+$iscss-margin--large:                      double($iscss-margin) !default;
+$iscss-margin--huge:                    quadruple($iscss-margin) !default;
+
+$iscss-padding:                         $iscss-base-spacing-unit !default;
+$iscss-padding--small:                      halve($iscss-padding) !default;
+$iscss-padding--tiny:                     quarter($iscss-padding) !default;
+$iscss-padding--large:                     double($iscss-padding) !default;
+$iscss-padding--huge:                   quadruple($iscss-padding) !default;
+
+$iscss-enable-margins:                  false !default;
+$iscss-enable-margins--tiny:            false !default;
+$iscss-enable-margins--small:           false !default;
+$iscss-enable-margins--large:           false !default;
+$iscss-enable-margins--huge:            false !default;
+
+$iscss-enable-margins--negative:        false !default;
+$iscss-enable-margins--negative-tiny:   false !default;
+$iscss-enable-margins--negative-small:  false !default;
+$iscss-enable-margins--negative-large:  false !default;
+$iscss-enable-margins--negative-huge:   false !default;
+
+$iscss-enable-margins--none:            false !default;
+
+$iscss-enable-paddings:                 false !default;
+$iscss-enable-paddings--tiny:           false !default;
+$iscss-enable-paddings--small:          false !default;
+$iscss-enable-paddings--large:          false !default;
+$iscss-enable-paddings--huge:           false !default;
+
+$iscss-enable-paddings--none:           false !default;
+
+
+
+
+
+@if ($iscss-enable-margins == true) {
+
+    /**
+     * Margin helper classes.
+     *
+     * Add margins.
+     */
+
+    .#{$iscss-spacing-namespace}u-m     { margin:           $iscss-margin !important; }
+    .#{$iscss-spacing-namespace}u-mt    { margin-top:       $iscss-margin !important; }
+    .#{$iscss-spacing-namespace}u-mr    { margin-right:     $iscss-margin !important; }
+    .#{$iscss-spacing-namespace}u-mb    { margin-bottom:    $iscss-margin !important; }
+    .#{$iscss-spacing-namespace}u-ml    { margin-left:      $iscss-margin !important; }
+    .#{$iscss-spacing-namespace}u-mh    { margin-right:     $iscss-margin !important; margin-left:      $iscss-margin !important; }
+    .#{$iscss-spacing-namespace}u-mv    { margin-top:       $iscss-margin !important; margin-bottom:    $iscss-margin !important; }
+
+}
+
+
+@if ($iscss-enable-margins--tiny == true) {
+
+    /**
+     * Add tiny margins.
+     */
+
+    .#{$iscss-spacing-namespace}u-m--   { margin:           $iscss-margin--tiny !important; }
+    .#{$iscss-spacing-namespace}u-mt--  { margin-top:       $iscss-margin--tiny !important; }
+    .#{$iscss-spacing-namespace}u-mr--  { margin-right:     $iscss-margin--tiny !important; }
+    .#{$iscss-spacing-namespace}u-mb--  { margin-bottom:    $iscss-margin--tiny !important; }
+    .#{$iscss-spacing-namespace}u-ml--  { margin-left:      $iscss-margin--tiny !important; }
+    .#{$iscss-spacing-namespace}u-mh--  { margin-right:     $iscss-margin--tiny !important; margin-left:     $iscss-margin--tiny !important; }
+    .#{$iscss-spacing-namespace}u-mv--  { margin-top:       $iscss-margin--tiny !important; margin-bottom:   $iscss-margin--tiny !important; }
+
+}
+
+
+@if ($iscss-enable-margins--small == true) {
+
+    /**
+     * Add small margins.
+     */
+
+    .#{$iscss-spacing-namespace}u-m-    { margin:           $iscss-margin--small !important; }
+    .#{$iscss-spacing-namespace}u-mt-   { margin-top:       $iscss-margin--small !important; }
+    .#{$iscss-spacing-namespace}u-mr-   { margin-right:     $iscss-margin--small !important; }
+    .#{$iscss-spacing-namespace}u-mb-   { margin-bottom:    $iscss-margin--small !important; }
+    .#{$iscss-spacing-namespace}u-ml-   { margin-left:      $iscss-margin--small !important; }
+    .#{$iscss-spacing-namespace}u-mh-   { margin-right:     $iscss-margin--small !important; margin-left:   $iscss-margin--small !important; }
+    .#{$iscss-spacing-namespace}u-mv-   { margin-top:       $iscss-margin--small !important; margin-bottom: $iscss-margin--small !important; }
+
+}
+
+
+@if ($iscss-enable-margins--large == true) {
+
+    /**
+     * Add large margins.
+     */
+
+    .#{$iscss-spacing-namespace}u-m\+   { margin:           $iscss-margin--large !important; }
+    .#{$iscss-spacing-namespace}u-mt\+  { margin-top:       $iscss-margin--large !important; }
+    .#{$iscss-spacing-namespace}u-mr\+  { margin-right:     $iscss-margin--large !important; }
+    .#{$iscss-spacing-namespace}u-mb\+  { margin-bottom:    $iscss-margin--large !important; }
+    .#{$iscss-spacing-namespace}u-ml\+  { margin-left:      $iscss-margin--large !important; }
+    .#{$iscss-spacing-namespace}u-mh\+  { margin-right:     $iscss-margin--large !important; margin-left:      $iscss-margin--large !important; }
+    .#{$iscss-spacing-namespace}u-mv\+  { margin-top:       $iscss-margin--large !important; margin-bottom:    $iscss-margin--large !important; }
+
+}
+
+
+@if ($iscss-enable-margins--huge == true) {
+
+    /**
+     * Add huge margins.
+     */
+
+    .#{$iscss-spacing-namespace}u-m\+\+     { margin:           $iscss-margin--huge !important; }
+    .#{$iscss-spacing-namespace}u-mt\+\+    { margin-top:       $iscss-margin--huge !important; }
+    .#{$iscss-spacing-namespace}u-mr\+\+    { margin-right:     $iscss-margin--huge !important; }
+    .#{$iscss-spacing-namespace}u-mb\+\+    { margin-bottom:    $iscss-margin--huge !important; }
+    .#{$iscss-spacing-namespace}u-ml\+\+    { margin-left:      $iscss-margin--huge !important; }
+    .#{$iscss-spacing-namespace}u-mh\+\+    { margin-right:     $iscss-margin--huge !important; margin-left:   $iscss-margin--huge !important; }
+    .#{$iscss-spacing-namespace}u-mv\+\+    { margin-top:       $iscss-margin--huge !important; margin-bottom: $iscss-margin--huge !important; }
+
+}
+
+
+@if ($iscss-enable-margins--none == true) {
+
+    /**
+     * Remove margins.
+     */
+
+    .#{$iscss-spacing-namespace}u-m0    { margin:           0 !important; }
+    .#{$iscss-spacing-namespace}u-mt0   { margin-top:       0 !important; }
+    .#{$iscss-spacing-namespace}u-mr0   { margin-right:     0 !important; }
+    .#{$iscss-spacing-namespace}u-mb0   { margin-bottom:    0 !important; }
+    .#{$iscss-spacing-namespace}u-ml0   { margin-left:      0 !important; }
+    .#{$iscss-spacing-namespace}u-mh0   { margin-right:     0 !important; margin-left:      0 !important; }
+    .#{$iscss-spacing-namespace}u-mv0   { margin-top:       0 !important; margin-bottom:    0 !important; }
+
+}
+
+
+@if ($iscss-enable-margins--negative == true) {
+
+    /**
+     * Negative margins.
+     */
+
+    .#{$iscss-spacing-namespace}u--m    { margin:           -$iscss-margin !important; }
+    .#{$iscss-spacing-namespace}u--mt   { margin-top:       -$iscss-margin !important; }
+    .#{$iscss-spacing-namespace}u--mr   { margin-right:     -$iscss-margin !important; }
+    .#{$iscss-spacing-namespace}u--mb   { margin-bottom:    -$iscss-margin !important; }
+    .#{$iscss-spacing-namespace}u--ml   { margin-left:      -$iscss-margin !important; }
+    .#{$iscss-spacing-namespace}u--mh   { margin-right:     -$iscss-margin !important; margin-left:      -$iscss-margin !important; }
+    .#{$iscss-spacing-namespace}u--mv   { margin-top:       -$iscss-margin !important; margin-bottom:    -$iscss-margin !important; }
+
+}
+
+
+@if ($iscss-enable-margins--negative-tiny == true) {
+
+    /**
+     * Tiny negative margins.
+     */
+
+    .#{$iscss-spacing-namespace}u--m--  { margin:           -$iscss-margin--tiny !important; }
+    .#{$iscss-spacing-namespace}u--mt-- { margin-top:       -$iscss-margin--tiny !important; }
+    .#{$iscss-spacing-namespace}u--mr-- { margin-right:     -$iscss-margin--tiny !important; }
+    .#{$iscss-spacing-namespace}u--mb-- { margin-bottom:    -$iscss-margin--tiny !important; }
+    .#{$iscss-spacing-namespace}u--ml-- { margin-left:      -$iscss-margin--tiny !important; }
+    .#{$iscss-spacing-namespace}u--mh-- { margin-right:     -$iscss-margin--tiny !important; margin-left:     -$iscss-margin--tiny !important; }
+    .#{$iscss-spacing-namespace}u--mv-- { margin-top:       -$iscss-margin--tiny !important; margin-bottom:   -$iscss-margin--huge !important; }
+
+}
+
+
+@if ($iscss-enable-margins--negative-small == true) {
+
+    /**
+     * Small negative margins.
+     */
+
+    .#{$iscss-spacing-namespace}u--m-   { margin:           -$iscss-margin--small !important; }
+    .#{$iscss-spacing-namespace}u--mt-  { margin-top:       -$iscss-margin--small !important; }
+    .#{$iscss-spacing-namespace}u--mr-  { margin-right:     -$iscss-margin--small !important; }
+    .#{$iscss-spacing-namespace}u--mb-  { margin-bottom:    -$iscss-margin--small !important; }
+    .#{$iscss-spacing-namespace}u--ml-  { margin-left:      -$iscss-margin--small !important; }
+    .#{$iscss-spacing-namespace}u--mh-  { margin-right:     -$iscss-margin--small !important; margin-left:   -$iscss-margin--small !important; }
+    .#{$iscss-spacing-namespace}u--mv-  { margin-top:       -$iscss-margin--small !important; margin-bottom: -$iscss-margin--small !important; }
+
+}
+
+
+@if ($iscss-enable-margins--negative-large == true) {
+
+    /**
+     * Large negative margins.
+     */
+
+    .#{$iscss-spacing-namespace}u--m\+  { margin:           -$iscss-margin--large !important; }
+    .#{$iscss-spacing-namespace}u--mt\+ { margin-top:       -$iscss-margin--large !important; }
+    .#{$iscss-spacing-namespace}u--mr\+ { margin-right:     -$iscss-margin--large !important; }
+    .#{$iscss-spacing-namespace}u--mb\+ { margin-bottom:    -$iscss-margin--large !important; }
+    .#{$iscss-spacing-namespace}u--ml\+ { margin-left:      -$iscss-margin--large !important; }
+    .#{$iscss-spacing-namespace}u--mh\+ { margin-right:     -$iscss-margin--large !important; margin-left:      -$iscss-margin--large !important; }
+    .#{$iscss-spacing-namespace}u--mv\+ { margin-top:       -$iscss-margin--large !important; margin-bottom:    -$iscss-margin--large !important; }
+
+}
+
+
+@if ($iscss-enable-margins--negative-huge == true) {
+
+    /**
+     * Huge negative margins.
+     */
+
+    .#{$iscss-spacing-namespace}u--m\+\+    { margin:           -$iscss-margin--huge !important; }
+    .#{$iscss-spacing-namespace}u--mt\+\+   { margin-top:       -$iscss-margin--huge !important; }
+    .#{$iscss-spacing-namespace}u--mr\+\+   { margin-right:     -$iscss-margin--huge !important; }
+    .#{$iscss-spacing-namespace}u--mb\+\+   { margin-bottom:    -$iscss-margin--huge !important; }
+    .#{$iscss-spacing-namespace}u--ml\+\+   { margin-left:      -$iscss-margin--huge !important; }
+    .#{$iscss-spacing-namespace}u--mh\+\+   { margin-right:     -$iscss-margin--huge !important; margin-left:   -$iscss-margin--huge !important; }
+    .#{$iscss-spacing-namespace}u--mv\+\+   { margin-top:       -$iscss-margin--huge !important; margin-bottom: -$iscss-margin--huge !important; }
+
+}
+
+
+
+
+
+@if ($iscss-enable-paddings == true) {
+
+    /**
+     * Padding helper classes.
+     *
+     * Add paddings.
+     */
+
+    .#{$iscss-spacing-namespace}u-p     { padding:          $iscss-padding !important; }
+    .#{$iscss-spacing-namespace}u-pt    { padding-top:      $iscss-padding !important; }
+    .#{$iscss-spacing-namespace}u-pr    { padding-right:    $iscss-padding !important; }
+    .#{$iscss-spacing-namespace}u-pb    { padding-bottom:   $iscss-padding !important; }
+    .#{$iscss-spacing-namespace}u-pl    { padding-left:     $iscss-padding !important; }
+    .#{$iscss-spacing-namespace}u-ph    { padding-right:    $iscss-padding !important; padding-left:    $iscss-padding !important; }
+    .#{$iscss-spacing-namespace}u-pv    { padding-top:      $iscss-padding !important; padding-bottom:  $iscss-padding !important; }
+
+}
+
+
+@if ($iscss-enable-paddings--tiny == true) {
+
+    /**
+     * Add tiny paddings.
+     */
+
+    .#{$iscss-spacing-namespace}u-p--   { padding:           $iscss-padding--tiny !important; }
+    .#{$iscss-spacing-namespace}u-pt--  { padding-top:       $iscss-padding--tiny !important; }
+    .#{$iscss-spacing-namespace}u-pr--  { padding-right:     $iscss-padding--tiny !important; }
+    .#{$iscss-spacing-namespace}u-pb--  { padding-bottom:    $iscss-padding--tiny !important; }
+    .#{$iscss-spacing-namespace}u-pl--  { padding-left:      $iscss-padding--tiny !important; }
+    .#{$iscss-spacing-namespace}u-ph--  { padding-right:     $iscss-padding--tiny !important; padding-left:      $iscss-padding--tiny !important; }
+    .#{$iscss-spacing-namespace}u-pv--  { padding-top:       $iscss-padding--tiny !important; padding-bottom:    $iscss-padding--tiny !important; }
+
+}
+
+
+@if ($iscss-enable-paddings--small == true) {
+
+    /**
+     * Add small paddings.
+     */
+
+    .#{$iscss-spacing-namespace}u-p-    { padding:           $iscss-padding--small !important; }
+    .#{$iscss-spacing-namespace}u-pt-   { padding-top:       $iscss-padding--small !important; }
+    .#{$iscss-spacing-namespace}u-pr-   { padding-right:     $iscss-padding--small !important; }
+    .#{$iscss-spacing-namespace}u-pb-   { padding-bottom:    $iscss-padding--small !important; }
+    .#{$iscss-spacing-namespace}u-pl-   { padding-left:      $iscss-padding--small !important; }
+    .#{$iscss-spacing-namespace}u-ph-   { padding-right:     $iscss-padding--small !important; padding-left:    $iscss-padding--small !important; }
+    .#{$iscss-spacing-namespace}u-pv-   { padding-top:       $iscss-padding--small !important; padding-bottom:  $iscss-padding--small !important; }
+
+}
+
+
+@if ($iscss-enable-paddings--large == true) {
+
+    /**
+     * Add large paddings.
+     */
+
+    .#{$iscss-spacing-namespace}u-p\+   { padding:           $iscss-padding--large !important; }
+    .#{$iscss-spacing-namespace}u-pt\+  { padding-top:       $iscss-padding--large !important; }
+    .#{$iscss-spacing-namespace}u-pr\+  { padding-right:     $iscss-padding--large !important; }
+    .#{$iscss-spacing-namespace}u-pb\+  { padding-bottom:    $iscss-padding--large !important; }
+    .#{$iscss-spacing-namespace}u-pl\+  { padding-left:      $iscss-padding--large !important; }
+    .#{$iscss-spacing-namespace}u-ph\+  { padding-right:     $iscss-padding--large !important; padding-left:   $iscss-padding--large !important; }
+    .#{$iscss-spacing-namespace}u-pv\+  { padding-top:       $iscss-padding--large !important; padding-bottom: $iscss-padding--large !important; }
+
+}
+
+
+@if ($iscss-enable-paddings--huge == true) {
+
+    /**
+     * Add huge paddings.
+     */
+
+    .#{$iscss-spacing-namespace}u-p\+\+     { padding:           $iscss-padding--huge !important; }
+    .#{$iscss-spacing-namespace}u-pt\+\+    { padding-top:       $iscss-padding--huge !important; }
+    .#{$iscss-spacing-namespace}u-pr\+\+    { padding-right:     $iscss-padding--huge !important; }
+    .#{$iscss-spacing-namespace}u-pb\+\+    { padding-bottom:    $iscss-padding--huge !important; }
+    .#{$iscss-spacing-namespace}u-pl\+\+    { padding-left:      $iscss-padding--huge !important; }
+    .#{$iscss-spacing-namespace}u-ph\+\+    { padding-right:     $iscss-padding--huge !important; padding-left:    $iscss-padding--huge !important; }
+    .#{$iscss-spacing-namespace}u-pv\+\+    { padding-top:       $iscss-padding--huge !important; padding-bottom:  $iscss-padding--huge !important; }
+
+}
+
+
+@if ($iscss-enable-paddings--none == true) {
+
+    /**
+     * Remove paddings.
+     */
+
+    .#{$iscss-spacing-namespace}u-p0    { padding:          0 !important; }
+    .#{$iscss-spacing-namespace}u-pt0   { padding-top:      0 !important; }
+    .#{$iscss-spacing-namespace}u-pr0   { padding-right:    0 !important; }
+    .#{$iscss-spacing-namespace}u-pb0   { padding-bottom:   0 !important; }
+    .#{$iscss-spacing-namespace}u-pl0   { padding-left:     0 !important; }
+    .#{$iscss-spacing-namespace}u-ph0   { padding-right:    0 !important; padding-left:     0 !important; }
+    .#{$iscss-spacing-namespace}u-pv0   { padding-top:      0 !important; padding-bottom:   0 !important; }
+
+}

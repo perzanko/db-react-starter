@@ -1,0 +1,109 @@
+/*------------------------------------*\
+    #50-atoms nav-user
+\*------------------------------------*/
+/*//*/
+/*/ @group nav-user*/
+/*//*/
+
+$iscss-namespace-nav-user:   $iscss-namespace !default;
+
+.#{$iscss-namespace-nav-user}nav-user {
+  margin-left: calculate-rem(15px) !important;
+  padding: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-left: 1px solid $color-grey-light;
+
+  &__name {
+    padding: 0 calculate-rem(25px);
+    strong,span {
+      display: block;
+    }
+    strong {
+      cursor: pointer;
+      @include iscss-font-size(18px, 1.2);
+    }
+    span {
+      cursor: pointer;
+      font-weight: 300;
+      @include iscss-font-size(14px, 1.2);
+    }
+
+    &:hover {
+      color: $color-text !important;
+      &:after {
+        display: none;
+      }
+    }
+  }
+  &__avatar {
+    height: calculate-rem(48px);
+    width: calculate-rem(48px);
+    border-radius: 100%;
+    // overflow: hidden;
+    background: #0496ff;
+    background: -moz-linear-gradient(-45deg, #0496ff 0%, #0079bf 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, #0496ff), color-stop(100%, #0079bf));
+    background: -webkit-linear-gradient(-45deg, #0496ff 0%, #0079bf 100%);
+    background: -o-linear-gradient(-45deg, #0496ff 0%, #0079bf 100%);
+    background: -ms-linear-gradient(-45deg, #0496ff 0%, #0079bf 100%);
+    background: linear-gradient(135deg, #0496ff 0%, #0079bf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0496ff', endColorstr='#0079bf', GradientType=1 );
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    border: none;
+    @include iscss-font-size(24px, 1);
+    color: white !important;
+    font-weight: 500;
+    img {
+      max-height: 60%;
+
+    }
+    &:hover {
+      color: white !important;
+      &:after {
+        display: none;
+      }
+    }
+    .fb-avatar {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      position: absolute;
+      max-height: calculate-rem(50px);
+      max-width: calculate-rem(50px);
+      border-radius: 100%;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    justify-content: center;
+    text-align: center;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-left: 0 !important;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    &__name {
+      flex-basis: 100%;
+      padding: 0 calculate-rem(10px);
+    }
+    &__avatar {
+      flex-basis: 100%;
+      padding: 0 calculate-rem(10px);
+      margin-bottom: calculate-rem(10px);
+    }
+  }
+}

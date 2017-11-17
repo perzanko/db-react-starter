@@ -1,0 +1,90 @@
+/*------------------------------------*\
+    #60-molecules order-step-4
+\*------------------------------------*/
+/*//*/
+/*/ @group order-step-4*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-order-step-4:   $iscss-namespace !default;
+
+
+.#{$iscss-namespace-order-step-4}order-step-4 {
+  hr {
+    margin: calculate-rem(15px) auto calculate-rem(50px) auto;
+    max-width: calculate-rem(700px);
+  }
+  hr.small {
+    margin: calculate-rem(5px) 0;
+  }
+  hr.small.mb {
+    margin: calculate-rem(5px) 0 calculate-rem(25px) 0;
+  }
+  &--active {
+    opacity: 1;
+  }
+  &__wrapper {
+    width: 100%;
+    max-width: calculate-rem(700px);
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: calculate-rem(50px);
+    @media (max-width: 650px) {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+  }
+  &__summary {
+    -ms-flex-preferred-size: 60%;
+    flex-basis: 60%;
+    @media (max-width: 650px) {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      margin-bottom: calculate-rem(30px);
+    }
+    &--multiple {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+    }
+  }
+  &__summary-sidebar {
+    -ms-flex-preferred-size: calc(40% - 80px);
+    flex-basis: calc(40% - 80px);
+    @media (max-width: 650px) {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+    }
+  }
+  &__provider {
+    -ms-flex-preferred-size: 48%;
+    flex-basis: 48%;
+    @media (max-width: 650px) {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+    }
+    &__title {
+      @include iscss-font-size(18px,1);
+      font-weight: 500;
+      margin-bottom: calculate-rem(15px);
+    }
+  }
+  &__info {
+    -ms-flex-preferred-size: 46%;
+    flex-basis: 46%;
+    max-width: 46%;
+    @media (max-width: 650px) {
+      margin-top: calculate-rem(25px);
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      max-width: 80%;
+    }
+  }
+}

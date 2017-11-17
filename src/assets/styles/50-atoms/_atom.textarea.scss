@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    #50-atoms textarea
+\*------------------------------------*/
+/*//*/
+/*/ @group textarea*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-textarea:             $iscss-namespace !default;
+/*/ @type px*/
+
+
+.#{$iscss-namespace-textarea}textarea {
+  textarea {
+    border-radius: 24px;
+    @include iscss-font-size(18px, 1.1);
+    padding: calculate-rem(13px) calculate-rem(20px);
+    border: none;
+    background-color: #eee;
+    display: block;
+    margin: 0 0 calculate-rem(20px) 0;
+    width: 100%;
+    color: $color-text;
+    outline: none;
+    resize: none;
+  }
+  position: relative;
+  &:after {
+    display: block;
+    content: " ";
+    width: 0;
+    @include iscss-transition();
+  }
+  &:before {
+    position: absolute;
+    width: calculate-rem(25px);
+    height: calculate-rem(25px);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 50%;
+    right: calculate-rem(20px);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}

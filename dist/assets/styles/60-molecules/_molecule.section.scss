@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    #60-molecules section
+\*------------------------------------*/
+/*//*/
+/*/ @group section*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-section:   $iscss-namespace !default;
+
+
+.#{$iscss-namespace-section}section {
+  padding: calculate-rem(50px) 0;
+  &--text {
+    img {
+      margin: calculate-rem(20px) 0;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: calculate-rem(30px) 0;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: calculate-rem(20px) 0;    
+  }
+}

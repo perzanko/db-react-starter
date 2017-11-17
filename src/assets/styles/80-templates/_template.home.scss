@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    #80-templates home
+\*------------------------------------*/
+/*//*/
+/*/ @group home*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-home:   $iscss-namespace !default;
+
+.#{$iscss-namespace-home}home {
+  opacity: 0;
+  @include iscss-transition();
+  &--active {
+    opacity: 1;
+  }
+}

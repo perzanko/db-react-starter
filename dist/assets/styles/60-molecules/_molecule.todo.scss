@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    #50-molecules form
+\*------------------------------------*/
+/*//*/
+/*/ @group form*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-form:   $iscss-namespace !default;
+
+
+.#{$iscss-namespace-form}form {
+
+}
+
+
+#todo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  #add_todo_name,#add_todo_priority,#add_todo_button {
+    display: block;
+    width: 300px;
+    min-height: 50px;
+    border: 1px solid #eee;
+    background-color: white;
+    padding: 15px;
+    border-radius: 2px;
+  }
+  #add_todo_button {
+    background: forestgreen;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-color: transparent;
+  }
+}
+.remove_todo {
+  font-weight: 700;
+  color: white;
+  font-size: 22px;
+  padding-left: 15px;
+  cursor: pointer;
+}

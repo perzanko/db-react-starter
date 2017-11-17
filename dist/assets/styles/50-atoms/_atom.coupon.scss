@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    #50-atoms coupon
+\*------------------------------------*/
+/*//*/
+/*/ @group coupon*/
+/*//*/
+
+$iscss-namespace-coupon:   $iscss-namespace !default;
+
+.#{$iscss-namespace-coupon}coupon {
+  margin-top: calculate-rem(20px);
+  .input--coupon {
+    margin-bottom: calculate-rem(15px) ;
+  }
+  &__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+
+    img {
+      margin-left: calculate-rem(30px);
+      max-height: calculate-rem(20px);
+    }
+  }
+  @include media-breakpoint-down(md) {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    .input--coupon {
+      max-width: calculate-rem(300px);
+      margin-right: calculate-rem($iscss-margin--small * 1.5);
+      margin-bottom: 0;
+      input {
+        margin: 0;
+      }
+    }
+    &__button {
+
+    }
+  }
+  @media (max-width: 400px) {
+    display: block;
+    .input--coupon {
+      margin-bottom: calculate-rem($iscss-margin--small);
+      input {
+
+      }
+    }
+  }
+}

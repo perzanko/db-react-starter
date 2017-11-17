@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    #50-atoms notice
+\*------------------------------------*/
+/*//*/
+/*/ @group notice*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-notice:             $iscss-namespace !default;
+/*/ @type px*/
+
+
+.#{$iscss-namespace-notice}notice {
+  @include iscss-font-size(16px, 1.4);
+  font-weight: 400;
+  color: $color-green;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: calculate-rem(600px);
+  margin: calculate-rem(30px) auto calculate-rem(15px);
+  @include iscss-transition();
+  opacity: 0;
+
+  img {
+    margin-right: 15px;
+    width: calculate-rem(45px);
+    height: calculate-rem(45px);
+  }
+
+  span {
+    text-align: left;
+
+    a {
+      font-weight: 500;
+    }
+  }
+
+  &--success {
+    opacity: 1;
+    color: $color-green;
+
+    span {
+      color: $color-green;
+
+      a {
+        color: $color-green;
+      }
+    }
+  }
+
+  &--fail {
+    opacity: 1;
+    color: $color-red;
+
+    span {
+      color: $color-red;
+
+      a {
+        color: $color-red;
+      }
+    }
+  }
+}

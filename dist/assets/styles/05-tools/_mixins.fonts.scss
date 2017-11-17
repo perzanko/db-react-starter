@@ -1,0 +1,85 @@
+/*------------------------------------*\
+    #05-tools Fonts
+\*------------------------------------*/
+
+////
+/// @group fonts
+////
+
+/// Create a fully formed type style (sizing and vertical rhythm) by passing in a
+/// single value.
+/// @author Szymon Kapturkiewicz
+/// @since 1.0
+/// @example
+///   .foo {
+///       @include iscss-font-size(12px);
+///   }
+///   .foo {
+///       @include iscss-font-size(12px, 1.5);
+///   }
+///   .foo {
+///       @include iscss-font-size(12px, calculate-rem(48px));
+///   }
+///   .foo {
+///       @include iscss-font-size(12px, normal);
+///   }
+/// @param {integer | string} $iscss-font-size [$iscss-base-font-size] - Enter font size
+/// @param {integer | auto | inherit | normal | none | false} $iscss-line-height [auto] - Enter line height
+/// @output line-height
+@mixin iscss-font-size($iscss-font-size: $iscss-base-font-size, $iscss-line-height: auto) {
+    font-size: $iscss-font-size;
+    font-size: calculate-rem($iscss-font-size);
+
+    @if $iscss-line-height == auto {
+        line-height: calculate-rem($iscss-font-size / 0.6);
+    }
+
+    @else {
+
+        @if (type-of($iscss-line-height) == number or $iscss-line-height == inherit or $iscss-line-height == normal or str_index($iscss-line-height, 'rem')) {
+            line-height: $iscss-line-height;
+        }
+
+        @elseif $iscss-line-height == compact {
+            line-height: calculate-rem($iscss-font-size / 0.8);
+        }
+
+        @elseif ($iscss-line-height != none and $iscss-line-height != false) {
+            @warn "D’oh! ‘#{$iscss-line-height}’ is not a valid value for `line-height`."
+        }
+
+    }
+
+}
+
+// @function calculate-rem($size) {
+//   $remSize: ($size / $iscss-base-font-size) * 1rem;
+//   @return $remSize;
+// }
+
+/// Calculate REM unit (Rapid Eye Movement)
+/// @example
+///   .foo {
+///       width: @include calculate-rem(100px);
+///   }
+/// @param {integer, string} $size [] - Font size to calculation
+/// @return {rem} Size in rem
+@function calculate-rem($size: 16px) {
+  $remSize: $size / $iscss-base-font-size;
+  @return #{$remSize}rem;
+}
+
+/// @param {integer} $size [] - Font size to calculation
+/// @output font-size: {rem} - Size in rem
+@mixin simple-font-size($size: 16) {
+  font-size: #{$size}px; //Fallback in px
+  font-size: calculate-rem($size);
+}
+
+@mixin smcp() {
+  font-variant-caps: small-caps;
+  -moz-font-feature-settings: "smcp";
+  -webkit-font-feature-settings: "smcp";
+  font-feature-settings: "smcp";
+  text-transform: uppercase;
+}

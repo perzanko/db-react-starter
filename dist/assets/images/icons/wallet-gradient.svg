@@ -1,0 +1,35 @@
+<svg id="9208071a-e840-4919-9cf3-f7576b5b93e1" data-name="Warstwa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .\33 e9d5dd1-b24d-436c-b08e-5fb3ec3e63f0 {
+        filter: url(#fbd62d96-852c-4724-af01-72008a9fd0fa);
+      }
+
+      .\30 e69c311-5ab1-4ad3-88f3-5cd06b04a5dc {
+        mask: url(#95a31040-dca1-49b0-a1d1-ced269172bae);
+      }
+
+      .\31 ae97ee1-fe4c-48d7-a6a0-6c62667767ce {
+        fill: url(#d5388eff-97d0-4f13-bacc-4d19ba1438d4);
+      }
+    </style>
+    <filter id="fbd62d96-852c-4724-af01-72008a9fd0fa" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feColorMatrix values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/>
+    </filter>
+    <mask id="95a31040-dca1-49b0-a1d1-ced269172bae" x="0" y="0" width="20" height="20" maskUnits="userSpaceOnUse">
+      <g class="3e9d5dd1-b24d-436c-b08e-5fb3ec3e63f0">
+        <path d="M17.5,9H17V6.5A1.5,1.5,0,0,0,15.5,5H13V0.5A0.5,0.5,0,0,0,12.5,0H2.5A0.5,0.5,0,0,0,2,.5V5A2.5,2.5,0,0,0,0,7.5v11A1.5,1.5,0,0,0,1.5,20h16A1.5,1.5,0,0,0,19,18.5v-8A1.5,1.5,0,0,0,17.5,9ZM3,1h9V7H3V1ZM2,6.09V7.5a0.5,0.5,0,0,0,.5.5h12a0.5,0.5,0,0,0,0-1H13V6h2.5a0.5,0.5,0,0,1,.5.5V9H2.5A1.5,1.5,0,0,1,2,6.09ZM18,18.5a0.5,0.5,0,0,1-.5.5H1.5A0.5,0.5,0,0,1,1,18.5v-9a2.48,2.48,0,0,0,1.5.5h15a0.5,0.5,0,0,1,.5.5v8Z"/>
+        <path d="M10.5,3H10V2.5A0.5,0.5,0,0,0,9.5,2h-2a0.5,0.5,0,0,0-.5.5V4H6V2.5a0.5,0.5,0,1,0-1,0V3H4.5a0.5,0.5,0,0,0,0,1H5V4.5a0.5,0.5,0,0,0,.5.5h2A0.5,0.5,0,0,0,8,4.5V3H9V4.5a0.5,0.5,0,0,0,1,0V4h0.5A0.5,0.5,0,0,0,10.5,3Z"/>
+        <path d="M16.5,18h-4a0.5,0.5,0,0,1,0-1h4A0.5,0.5,0,0,1,16.5,18Z"/>
+      </g>
+    </mask>
+    <linearGradient id="d5388eff-97d0-4f13-bacc-4d19ba1438d4" data-name="Gradient bez nazwy 7" x1="2.15" y1="2.48" x2="18.85" y2="18.48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0495ff"/>
+      <stop offset="1" stop-color="#0079bf"/>
+    </linearGradient>
+  </defs>
+  <title>wallet-gradient</title>
+  <g class="0e69c311-5ab1-4ad3-88f3-5cd06b04a5dc">
+    <rect class="1ae97ee1-fe4c-48d7-a6a0-6c62667767ce" width="20" height="20"/>
+  </g>
+</svg>

@@ -1,0 +1,121 @@
+/*------------------------------------*\
+    #60-molecules banner
+\*------------------------------------*/
+/*//*/
+/*/ @group banner*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-banner:   $iscss-namespace !default;
+
+
+.#{$iscss-namespace-banner}banner {
+  &--frontpage {
+    position: relative;
+    width: 100%;
+    height: calculate-rem(415px);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .overlay {
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      background-color: rgba(255,255,255,0.48);
+    }
+    @include media-breakpoint-down(xs) {
+      height: calculate-rem(150px);
+    }
+  }
+  &--wave {
+    position: relative;
+    width: 100%;
+    height: calculate-rem(550px);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding-bottom: calculate-rem(50px);
+    .overlay {
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      background-color: rgba(255,255,255,0.48);
+    }
+    &:after {
+      content: " ";
+      display: block;
+      width: 150%;
+      height: 100%;
+      position: absolute;
+      bottom: calculate-rem(-15px);
+      left: 0;
+      background-image: url(/assets/images/wave-white-1.svg);
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    @include media-breakpoint-down(md) {
+      height: calculate-rem(350px);
+      &:after {
+        display: none;
+      }
+    }
+    @include media-breakpoint-down(xs) {
+      height: calculate-rem(150px);
+    }
+  }
+  &__title {
+    width: 100%;
+    z-index: 2;
+    @include iscss-font-size(40px, 1);
+    font-weight: 500;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    img {
+      max-width: calculate-rem(40px);
+      max-height: calculate-rem(40px);
+      margin-bottom: calculate-rem(8px);
+      margin-left: calculate-rem(12px);
+    }
+    @include media-breakpoint-down(xs) {
+      @include iscss-font-size(30px, 1);
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+    &__wrapper {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      z-index: 2;
+      @include media-breakpoint-down(md) {
+        bottom: calculate-rem(15px);
+      }
+      @include media-breakpoint-down(xs) {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      @media (min-width: 1200px) {
+        bottom: calculate-rem(30px);
+      }
+    }
+  }
+}

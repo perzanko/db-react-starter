@@ -1,0 +1,142 @@
+/*------------------------------------*\
+    #70-organisms user-panel
+\*------------------------------------*/
+/*//*/
+/*/ @group user-panel*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-user-panel:   $iscss-namespace !default;
+
+.#{$iscss-namespace-user-panel}user-panel {
+  margin-bottom: calculate-rem(100px);
+  &__nav {
+    margin-bottom: calculate-rem(30px);
+    @include media-breakpoint-down(md) {
+      margin-top: calculate-rem(30px);
+    }
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      @include media-breakpoint-down(sm) {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      &__item {
+        cursor: pointer;
+        -ms-flex-preferred-size: 18%;
+        flex-basis: 18%;
+        border-radius: 10px;
+        background: #f6f6f6;
+        padding: calculate-rem(20px);
+        text-align: center;
+        @include iscss-transition();
+        span {
+          @include iscss-transition();
+          color: $color-text;
+          @include iscss-font-size(20px,1);
+          font-weight: 500;
+        }
+        &--active {
+          background: $color-blue-light;
+          span {
+            color: white;
+          }
+        }
+        &:hover {
+          background: $color-blue-light;
+          span {
+            color: white;
+          }
+        }
+        @include media-breakpoint-down(md) {
+          padding: calculate-rem(12px);
+        }
+        @include media-breakpoint-down(sm) {
+          -ms-flex-preferred-size: 30%;
+          flex-basis: 30%;
+          margin: 0 calculate-rem(8px) calculate-rem(20px);
+        }
+        @include media-breakpoint-down(xs) {
+          padding: calculate-rem(6px) calculate-rem(10px);
+          span {
+            @include iscss-font-size(16px, 1);
+          }
+          -ms-flex-preferred-size: 25%;
+          flex-basis: 25%;
+          margin: 0 calculate-rem(8px) calculate-rem(20px);
+        }
+      }
+    }
+  }
+  &__container {
+    overflow-x: auto;
+    border-radius: 10px;
+    background-color: #f6f6f6;
+    padding: calculate-rem(25px) calculate-rem(20px) calculate-rem(30px);
+    min-height: calculate-rem(500px);
+    @include media-breakpoint-down(sm) {
+      padding: calculate-rem(25px) calculate-rem(10px) calculate-rem(30px);
+    }
+    @include media-breakpoint-down(xs) {
+      padding: calculate-rem(25px) 0 calculate-rem(30px);
+    }
+  }
+  &__heading {
+    margin: 0;
+    line-height: 1;
+    &__wrapper {
+      position: relative;
+      hr {
+        margin: calculate-rem(20px) 0 calculate-rem(35px) 0;
+      }
+    }
+    &__toggle {
+      margin-top: calculate-rem(10px);
+      text-align: center;
+      &__item {
+        background-color: transparent;
+        border: none;
+        color: $color-text;
+        padding-top: 0;
+        padding-bottom: 0;
+        @include iscss-font-size(16px, 1);
+        font-weight: 500;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        margin-top: 0;
+        text-align: left;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+      }
+      .current {
+        text-decoration: underline;
+      }
+    }
+  }
+  .help {
+    background-color: white;
+    border-radius: 10px;
+    padding: calculate-rem(15px);
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

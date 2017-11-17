@@ -1,0 +1,196 @@
+/*------------------------------------*\
+    #60-molecules calendar
+\*------------------------------------*/
+/*//*/
+/*/ @group calendar*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-calendar:   $iscss-namespace !default;
+
+
+.#{$iscss-namespace-calendar}calendar {
+  position: relative;
+  padding: calculate-rem(30px) calculate-rem(20px);
+  background-color: white;
+  border-radius: 10px;
+  height: calculate-rem(900px);
+  // min-width: 650px;
+  @include media-breakpoint-down(sm) {
+    height: calculate-rem(600px);
+  }
+  @include media-breakpoint-down(xs) {
+    padding: calculate-rem(30px) calculate-rem(10px);
+    height: calculate-rem(400px);
+
+  }
+  .rbc-row {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .rbc-date-cell {
+      margin-left: 1px;
+      background-color: whitesmoke;
+      a {
+        position: relative;
+        z-index: 12;
+        @include media-breakpoint-down(xs) {
+          @include iscss-font-size(12px, 1);
+        }
+      }
+    }
+    &-content {
+      position: relative;
+      height: 100%;
+    }
+    &-segment {
+      position: relative;
+      .day-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 1px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        &--disabled {
+          background-color: #ededed;
+        }
+      }
+    }
+  }
+  .day-inner {
+
+    &__wrapper {
+      cursor: pointer;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    &--available {
+      background-color: white;
+      @include iscss-transition();
+      &:hover,&:active,&:focus {
+        background-color: $color-green;
+      }
+    }
+    &--disable {
+      background-color: white;
+      @include iscss-transition();
+      &:hover,&:active,&:focus {
+        background-color: $color-red;
+        span {
+          opacity: 1;
+        }
+      }
+      span {
+        opacity: 0;
+        font-weight: 500;
+        padding: calculate-rem(10px);
+        text-align: center;
+        @include iscss-font-size(16px, 1.2);
+        color: white;
+      }
+    }
+    &--avatar {
+      background-color: white;
+      text-align: center;
+      @include iscss-transition();
+      opacity: 1;
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
+      display: flex !important;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      .day-inner__avatar {
+        margin: calculate-rem(8px) auto;
+        display: block;
+        width: calculate-rem(35px);
+        height: calculate-rem(35px);
+        @include media-breakpoint-down(xs) {
+          margin: calculate-rem(25px) auto calculate-rem(5px);
+          width: calculate-rem(20px);
+          height: calculate-rem(20px);
+        }
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          display: block;
+        }
+      }
+      button {
+        display: block !important;
+        border: none;
+        margin: 0;
+        background: none;
+        outline: none;
+        span {
+          display: block;
+          @include iscss-font-size(14px,1.25);
+          strong {
+          }
+        }
+      }
+      &:hover,&:active,&:focus {
+      }
+    }
+  }
+  .rbc-btn-group {
+    &:last-child {
+      display: none;
+    }
+    button {
+      &:first-child {
+        display: none !important;
+      }
+      background-color: transparent;
+      border: none;
+      font-size: 0;
+      outline: none;
+      display: block;
+      width: calculate-rem(15px);
+      height: calculate-rem(15px);
+      padding: 0;
+      border-right: 1px solid $color-text;
+      border-bottom: 1px solid $color-text;
+      border-radius: 0;
+      position: absolute;
+      top: 40px;
+      -webkit-transform: rotate(-225deg);
+      transform: rotate(-225deg);
+      right: auto;
+      left: 20px;
+      &:last-child {
+        left: auto;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        right: 20px;
+      }
+      &:active,&:focus,&:hover {
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+/*------------------------------------*\
+    #60-molecules call-to-action
+\*------------------------------------*/
+/*//*/
+/*/ @group call-to-action*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-call-to-action:   $iscss-namespace !default;
+
+
+.#{$iscss-namespace-call-to-action}call-to-action {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: " ";
+    display: block;
+    height: calculate-rem(170px);
+    width: calculate-rem(185px);
+    position: absolute;
+    right: 70%;
+    bottom: -0.8%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/assets/images/icons/call-to-action-arrow.svg);
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    @include media-breakpoint-down(lg) {
+      right: 80%;
+      -webkit-transform: rotate(-10deg);
+      transform: rotate(-10deg);
+      height: calculate-rem(140px);
+      width: calculate-rem(155px);
+    }
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  &__wrapper {
+    text-align: center;
+    padding: calculate-rem(150px) 0 calculate-rem(170px) 0;
+    @include media-breakpoint-down(lg) {
+      padding: calculate-rem(100px) 0 calculate-rem(120px) 0;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: calculate-rem(60px) 0 calculate-rem(75px) 0;
+    }
+  }
+  &__heading {
+    text-align: center;
+    font-weight: 700;
+    @include iscss-font-size(54px,1.3);
+    color: white;
+    @include media-breakpoint-down(md) {
+      @include iscss-font-size(48px, 1.3);
+    }
+    @include media-breakpoint-down(xs) {
+      @include iscss-font-size(36px, 1.3);
+    }
+  }
+}

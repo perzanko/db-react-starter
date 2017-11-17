@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    #50-atoms order-additional-info
+\*------------------------------------*/
+/*//*/
+/*/ @group order-additional-info*/
+/*//*/
+
+$iscss-namespace-order-additional-info:   $iscss-namespace !default;
+
+.#{$iscss-namespace-order-additional-info}order-additional-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: calculate-rem(40px);
+  margin-bottom: calculate-rem(40px);
+  @include media-breakpoint-down(xs) {
+    margin-top: calculate-rem(20px);
+  }
+  &__text {
+    -ms-flex-preferred-size: 57%;
+    flex-basis: 57%;
+    @include media-breakpoint-down(md) {
+      -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
+    }
+    @include media-breakpoint-down(sm) {
+      -ms-flex-preferred-size: 53%;
+      flex-basis: 53%;
+    }
+    @include media-breakpoint-down(xs) {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+    }
+  }
+  &__form {
+    -ms-flex-preferred-size: 40%;
+    flex-basis: 40%;
+    @include media-breakpoint-down(xs) {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+    }
+  }
+}

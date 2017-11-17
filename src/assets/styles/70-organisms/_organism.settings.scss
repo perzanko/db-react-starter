@@ -1,0 +1,62 @@
+/*------------------------------------*\
+    #70-organisms settings
+\*------------------------------------*/
+/*//*/
+/*/ @group settings*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-settings:   $iscss-namespace !default;
+
+.#{$iscss-namespace-settings}settings {
+  background-color: white;
+  padding: calculate-rem(15px);
+  padding-bottom: calculate-rem(40px);
+  border-radius: 10px;
+  &__item {
+    max-width: calculate-rem(800px);
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    .input {
+      margin-left: 8px;
+      margin-right: 8px;
+      -ms-flex-preferred-size: calc(50% - 16px);
+      flex-basis: calc(50% - 16px);
+      &--small {
+        -ms-flex-preferred-size: calc(30% - 16px);
+        flex-basis: calc(30% - 16px);
+      }
+      @include media-breakpoint-down(sm) {
+        flex-basis: 100%;
+      }
+    }
+    .checkbox {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      margin-left: 8px;
+      margin-bottom: calculate-rem(30px);
+    }
+    p {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+      text-align: center;
+      font-weight: 500;
+      margin-top: calculate-rem(30px);
+    }
+    &--right {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

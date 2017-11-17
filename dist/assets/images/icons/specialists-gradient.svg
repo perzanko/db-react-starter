@@ -1,0 +1,23 @@
+<svg id="9fc1532b-79d5-4ccb-99cd-ecf87b7fccdc" data-name="Warstwa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.21 16.41">
+  <defs>
+    <style>
+      .f92eb7e9-1b8c-4149-8877-50b97b1be87b {
+        fill: #fff;
+      }
+      .\30 66d743e-75e2-4ef9-b9e2-f2f2e224ac29 {
+        mask: url("#07960375-d61b-4b7b-b49b-a7f8f5389604");
+      }
+      .\37 e5253fb-d5b8-4233-ba01-f62298af6134 {
+        fill: url("#bfdf3e13-c0c6-47a1-a8ab-b5dd35ba48cc");
+      }
+    </style>
+    <mask id="07960375-d61b-4b7b-b49b-a7f8f5389604" x="0" y="0" width="21.21" height="16.41" maskUnits="userSpaceOnUse">
+      <g transform="translate(0.6 -2.85)"><path
+        class="f92eb7e9-1b8c-4149-8877-50b97b1be87b"
+        d="M18.5,18H7.5A1.5,1.5,0,0,1,6,16.5a4,4,0,0,1,.92-2.32,5.26,5.26,0,0,1,2.13-1.52A10.46,10.46,0,0,1,13,12a10.48,10.48,0,0,1,3.95.66,5.26,5.26,0,0,1,2.13,1.52A4,4,0,0,1,20,16.5,1.5,1.5,0,0,1,18.5,18ZM7,16.5a0.5,0.5,0,0,0,.5.5h11a0.5,0.5,0,0,0,.5-0.5,3.05,3.05,0,0,0-.74-1.73C17.29,13.61,15.47,13,13,13s-4.29.61-5.26,1.77A3.05,3.05,0,0,0,7,16.5Z"/><path class="f92eb7e9-1b8c-4149-8877-50b97b1be87b" d="M13,11a4,4,0,1,1,4-4A4,4,0,0,1,13,11Zm0-7a3,3,0,1,0,3,3A3,3,0,0,0,13,4Z"/><path class="f92eb7e9-1b8c-4149-8877-50b97b1be87b" d="M4.5,18h-3A1.5,1.5,0,0,1,0,16.5a3.26,3.26,0,0,1,.66-1.8A3.81,3.81,0,0,1,2.2,13.51,6.91,6.91,0,0,1,5,13H5.53a0.5,0.5,0,1,1-.05,1H5c-3.89,0-4,2.38-4,2.5a0.5,0.5,0,0,0,.5.5h3a0.5,0.5,0,0,1,0,1h0Z"/><path class="f92eb7e9-1b8c-4149-8877-50b97b1be87b" d="M5,12A3,3,0,1,1,8,9,3,3,0,0,1,5,12ZM5,7A2,2,0,1,0,7,9,2,2,0,0,0,5,7Z"/></g>
+    </mask>
+    <linearGradient id="bfdf3e13-c0c6-47a1-a8ab-b5dd35ba48cc" x1="0.4" y1="3.92" x2="19.96" y2="12.13" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0495ff"/><stop offset="1" stop-color="#0079bf"/></linearGradient>
+  </defs>
+  <title>specialists-gradient</title>
+  <g class="066d743e-75e2-4ef9-b9e2-f2f2e224ac29"><rect class="7e5253fb-d5b8-4233-ba01-f62298af6134" width="21.21" height="16.41"/></g>
+</svg>

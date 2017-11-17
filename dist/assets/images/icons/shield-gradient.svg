@@ -1,0 +1,34 @@
+<svg id="2b3cdc9a-da54-4e68-92c5-56fc006396bb" data-name="Warstwa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .\32 bc68000-2691-42f5-8ae8-7405aea9fc77 {
+        filter: url(#6a70d36c-6033-45e8-93ce-6f1707215b12);
+      }
+
+      .ae41339a-d87e-4eea-8e92-8bf1ba3f5b6c {
+        mask: url(#b7501f42-b367-43a3-a767-608740471031);
+      }
+
+      .\36 7214c17-64c1-4484-973c-df1964400e58 {
+        fill: url(#9d278ecc-416d-45dd-aeef-b7e0222ce836);
+      }
+    </style>
+    <filter id="6a70d36c-6033-45e8-93ce-6f1707215b12" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feColorMatrix values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/>
+    </filter>
+    <mask id="b7501f42-b367-43a3-a767-608740471031" x="0" y="0" width="20" height="20" maskUnits="userSpaceOnUse">
+      <g class="2bc68000-2691-42f5-8ae8-7405aea9fc77">
+        <path d="M9.5,20L9.34,20c-1.84-.61-4.15-2.65-5.88-5.19A19.94,19.94,0,0,1,0,3.5,0.5,0.5,0,0,1,.5,3C3.31,3,7.74,1.07,9.22.08a0.5,0.5,0,0,1,.56,0C11.26,1.07,15.69,3,18.5,3a0.5,0.5,0,0,1,.5.5,20,20,0,0,1-3.46,11.28c-1.73,2.54-4,4.58-5.88,5.19L9.5,20h0ZM1,4A18.94,18.94,0,0,0,4.29,14.22,13,13,0,0,0,9.5,19a13,13,0,0,0,5.21-4.75A18.94,18.94,0,0,0,18,4a17.78,17.78,0,0,1-4.73-1.14A23.62,23.62,0,0,1,9.5,1.09,23.62,23.62,0,0,1,5.74,2.84,17.83,17.83,0,0,1,1,4Z"/>
+        <path d="M8.5,12.5a0.5,0.5,0,0,1-.35-0.15l-2-2a0.5,0.5,0,0,1,.71-0.71L8.5,11.29l4.65-4.65a0.5,0.5,0,0,1,.71.71l-5,5a0.5,0.5,0,0,1-.35.15h0Z"/>
+      </g>
+    </mask>
+    <linearGradient id="9d278ecc-416d-45dd-aeef-b7e0222ce836" data-name="Gradient bez nazwy 7" x1="3" y1="3.06" x2="17.7" y2="17.63" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0495ff"/>
+      <stop offset="1" stop-color="#0079bf"/>
+    </linearGradient>
+  </defs>
+  <title>shield-gradient</title>
+  <g class="ae41339a-d87e-4eea-8e92-8bf1ba3f5b6c">
+    <rect class="67214c17-64c1-4484-973c-df1964400e58" width="20" height="20"/>
+  </g>
+</svg>

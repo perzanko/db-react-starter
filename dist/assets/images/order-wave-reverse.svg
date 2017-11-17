@@ -1,0 +1,15 @@
+<svg id="a1d4b09d-aeb3-44a5-b7c0-50b088e30480" data-name="0257afdb-e92a-407e-9bad-6884060928ee" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 383 139.62">
+  <defs>
+    <style>
+      .\38 2e9df64-ec30-49c5-9839-2024e3435d41 {
+        fill: url(#63a765a6-c6b3-410d-8eff-fb71a8fcf078);
+      }
+    </style>
+    <linearGradient id="63a765a6-c6b3-410d-8eff-fb71a8fcf078" data-name="Gradient bez nazwy" x1="113.11" y1="-50.12" x2="500.64" y2="-76.27" gradientTransform="translate(495.94 3.69) rotate(180)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0079bf"/>
+      <stop offset="1" stop-color="#0495ff"/>
+    </linearGradient>
+  </defs>
+  <title>order-wave-reverse</title>
+  <path class="82e9df64-ec30-49c5-9839-2024e3435d41" d="M0,12.47V109.6c18.32,5.88,36.45,11.12,52.32,15,62.23,15.22,172.87,29.89,330.68-15.11V1.39a116.81,116.81,0,0,1-11,5.85c-25.62,12.15-54.08,18-91.08,17.73-55.58-.34-65.71-13.89-122.26-21.39C96.25-4.69,39.75,2.69,0,12.47Z" transform="translate(0.03 0)"/>
+</svg>

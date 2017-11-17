@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    #60-molecules order-bottom
+\*------------------------------------*/
+/*//*/
+/*/ @group order-bottom*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-order-bottom:   $iscss-namespace !default;
+
+
+.#{$iscss-namespace-order-bottom}order-bottom {
+  margin-top: calculate-rem(30px);
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  opacity: 0;
+  @include iscss-transition();
+  &--active {
+    opacity: 1;
+  }
+  &__pagination {
+    visibility: hidden;
+    display: none;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: visible;
+  }
+}

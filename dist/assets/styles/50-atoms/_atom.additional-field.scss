@@ -1,0 +1,56 @@
+/*------------------------------------*\
+    #50-atoms additional-field
+\*------------------------------------*/
+/*//*/
+/*/ @group additional-field*/
+/*//*/
+
+$iscss-namespace-additional-field:   $iscss-namespace !default;
+
+.#{$iscss-namespace-additional-field}additional-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  margin-bottom: calculate-rem(20px);
+  width: 100%;
+  span {
+    display: block;
+    width: auto;
+  }
+  div.input--select {
+    margin-left: calculate-rem(24px);
+    width: calculate-rem(100px);
+    .react-selectize-control {
+      padding: calculate-rem(10px) calculate-rem(15px) !important;
+      &:before {
+        right: calculate-rem(16px) !important;
+        width: calculate-rem(18px) !important;
+        height: calculate-rem(18px) !important;
+      }
+    }
+    .resizable-input {
+      position: relative;
+      z-index: -9999;
+    }
+    .option-wrapper {
+      .simple-option {
+        line-height: 1.5 !important;
+        padding-left: calculate-rem(20px);
+        span {
+          color: $color-text !important;
+        }
+      }
+    }
+    .dropdown-menu {
+      margin: 0;
+    }
+  }
+  div.input--bigger {
+    width: calculate-rem(220px);
+  }
+}

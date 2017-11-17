@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    #50-molecules form
+\*------------------------------------*/
+////
+/// @group form
+////
+
+/// @group default
+/// @type namespace
+$iscss-namespace-form:   $iscss-namespace !default;
+
+
+.#{$iscss-namespace-form}form {
+  position: relative;
+}

@@ -1,0 +1,57 @@
+/*---------------------------------------------------*\
+    #00-settings Fonts
+\*---------------------------------------------------*/
+
+
+/*//*/
+/*/ @group fonts*/
+/*//*/
+
+/* Font faces*/
+
+/*/ @type font-family*/
+$iscss-font-family--base:           'Larsseit', 'Lato', Arial, sans-serif;
+
+/*/ 48*/
+/*/ @type px*/
+$iscss-font-size--xxxxxxl:   3 * $iscss-base-font-size !default;
+/*/ 36*/
+/*/ @type px*/
+$iscss-font-size--xxxxxl:   2.25 * $iscss-base-font-size !default;
+/*/ 30*/
+/*/ @type px*/
+$iscss-font-size--xxxl:   1.875 * $iscss-base-font-size !default;
+/*/ 24*/
+/*/ @type px*/
+$iscss-font-size--xxl:    1.500 * $iscss-base-font-size !default;
+/*/ 20*/
+/*/ @type px*/
+$iscss-font-size--xl:     1.250 * $iscss-base-font-size !default;
+/*/ 18*/
+/*/ @type px*/
+$iscss-font-size--lg:     1.125 * $iscss-base-font-size !default;
+/*/ 16*/
+/*/ @type px*/
+$iscss-font-size--md:     $iscss-base-font-size !default;
+/*/ 14*/
+/*/ @type px*/
+$iscss-font-size--sm:     0.875 * $iscss-base-font-size !default;
+/*/ 12*/
+/*/ @type px*/
+$iscss-font-size--xs:     0.750 * $iscss-base-font-size !default;
+
+
+
+
+/*/ @type font-weight*/
+$iscss-font-weight--bold:        700;
+/*/ @type font-weight*/
+$iscss-font-weight--semibold:    600;
+/*/ @type font-weight*/
+$iscss-font-weight--lightbold:     500;
+/*/ @type font-weight*/
+$iscss-font-weight--regular:     400;
+/*/ @type font-weight*/
+$iscss-font-weight--light:       300;
+/*/ @type font-weight*/
+$iscss-font-weight--extra-light: 200;

@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    #50-atoms coupon-price
+\*------------------------------------*/
+/*//*/
+/*/ @group coupon-price*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-coupon-price:             $iscss-namespace !default;
+/*/ @type px*/
+
+
+// span.#{$iscss-namespace-coupon-price}coupon-price {
+//   strong {
+//     @include iscss-font-size(20px, 1);
+//     position: relative;
+//     display: inline-block;
+//     &:before {
+//       position: absolute;
+//       left: 50%;
+//       top: 50%;
+//       -webkit-transform: translate(-50%, -50%) rotate(-15deg);
+//       transform: translate(-50%, -50%) rotate(-15deg);
+//       width: 110%;
+//       height: 1px;
+//       content: " ";
+//       display: block;
+//       background-color: $color-red;
+//     }
+//   }
+//   span {
+//
+//   }
+// }

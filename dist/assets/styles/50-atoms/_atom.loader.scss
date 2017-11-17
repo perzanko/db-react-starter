@@ -1,0 +1,104 @@
+/*------------------------------------*\
+    #50-atoms loader
+\*------------------------------------*/
+/*//*/
+/*/ @group loader*/
+/*//*/
+
+/*/ @group default*/
+/*/ @type namespace*/
+$iscss-namespace-loader:             $iscss-namespace !default;
+/*/ @type px*/
+
+
+.#{$iscss-namespace-loader}loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,.92);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 20;
+  // // new
+  // background-color: white;
+  // background-image: url(/assets/images/dumeo_loader2.gif);
+  // background-position: center;
+  // background-repeat: no-repeat;
+  &__bubble {
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  margin: 150px 0;
+  background: $color-blue-light;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -webkit-animation: bubbly .9s infinite alternate;
+  animation: bubbly .9s infinite alternate;
+  &--2 {
+    -webkit-animation-delay: .27s;
+    animation-delay: .27s;
+  }
+  &--3 {
+    -webkit-animation-delay: .54s;
+    animation-delay: .54s;
+  }
+}
+@keyframes bubbly {
+  0% {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    -webkit-transform: translateY(0) translateZ(0) translate3d(0,0,0);
+    transform: translateY(0) translateZ(0) translate3d(0,0,0);
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    opacity: 0.4;
+    -webkit-transform: translateY(-32px) translateZ(0) translate3d(0,0,0);
+    transform: translateY(-32px) translateZ(0) translate3d(0,0,0);
+  }
+}
+@-webkit-keyframes bubbly {
+  0% {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    -webkit-transform: translateY(0) translateZ(0) translate3d(0,0,0);
+    transform: translateY(0) translateZ(0) translate3d(0,0,0);
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    opacity: 0.4;
+    -webkit-transform: translateY(-32px) translateZ(0) translate3d(0,0,0);
+    transform: translateY(-32px) translateZ(0) translate3d(0,0,0);
+  }
+}
+@-moz-keyframes bubbly {
+  0% {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    transform: translateY(0) translateZ(0) translate3d(0,0,0);
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    opacity: 0.4;
+    transform: translateY(-32px) translateZ(0) translate3d(0,0,0);
+  }
+}
+
+}
